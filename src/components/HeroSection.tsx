@@ -38,304 +38,304 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
         className="aurora-glow h-96 w-96 bg-teal-200/30 bottom-10 right-10"
       />
 
-      {/* Live Tree of Life & Meditating Chakra Energy Body Animation */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none flex items-center justify-center z-0">
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 800 800"
-          className="w-full h-full max-w-[800px] max-h-[800px] opacity-[0.35] md:opacity-[0.45] transition-opacity duration-500"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <linearGradient id="spineGlow" x1="0" y1="1" x2="0" y2="0">
-              <stop offset="0%" stopColor="#FECACA" stopOpacity="0.5" />
-              <stop offset="16%" stopColor="#FED7AA" stopOpacity="0.5" />
-              <stop offset="33%" stopColor="#FDE68A" stopOpacity="0.5" />
-              <stop offset="50%" stopColor="#A7F3D0" stopOpacity="0.5" />
-              <stop offset="66%" stopColor="#90CDF4" stopOpacity="0.5" />
-              <stop offset="83%" stopColor="#BEE3F8" stopOpacity="0.5" />
-              <stop offset="100%" stopColor="#D6BCFA" stopOpacity="0.5" />
-            </linearGradient>
-            <linearGradient id="rootGlow" x1="0.5" y1="0" x2="0.5" y2="1">
-              <stop offset="0%" stopColor="#A7F3D0" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#059669" stopOpacity="0.02" />
-            </linearGradient>
-            <linearGradient id="branchGlow" x1="0.5" y1="1" x2="0.5" y2="0">
-              <stop offset="0%" stopColor="#C084FC" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#6366F1" stopOpacity="0.02" />
-            </linearGradient>
-            <linearGradient id="idaGlow" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#67E8F9" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="#2563EB" stopOpacity="0.05" />
-            </linearGradient>
-            <linearGradient id="pingalaGlow" x1="1" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#FDBA74" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="#DC2626" stopOpacity="0.05" />
-            </linearGradient>
-          </defs>
-
-          {/* Tree of Life Roots */}
-          <g strokeWidth="1" strokeLinecap="round">
-            {/* Central root */}
-            <motion.path 
-              d="M 400 580 Q 400 640 400 700 T 400 760" 
-              stroke="url(#rootGlow)"
-              animate={{ strokeWidth: [1, 1.3, 1], opacity: [0.7, 0.9, 0.7] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <path d="M 400 640 Q 385 680 375 720" stroke="url(#rootGlow)" />
-            <path d="M 400 670 Q 415 710 425 740" stroke="url(#rootGlow)" />
-
-            {/* Left root 1 */}
-            <motion.path 
-              d="M 400 580 Q 370 630 330 670 T 260 710" 
-              stroke="url(#rootGlow)"
-              animate={{ strokeWidth: [0.8, 1.1, 0.8] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            />
-            <path d="M 350 650 Q 320 690 280 710" stroke="url(#rootGlow)" />
-
-            {/* Left root 2 */}
-            <path d="M 400 580 Q 340 600 280 620 T 180 630" stroke="url(#rootGlow)" />
-
-            {/* Right root 1 */}
-            <motion.path 
-              d="M 400 580 Q 430 630 470 670 T 540 710" 
-              stroke="url(#rootGlow)"
-              animate={{ strokeWidth: [0.8, 1.1, 0.8] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            />
-            <path d="M 450 650 Q 480 690 520 710" stroke="url(#rootGlow)" />
-
-            {/* Right root 2 */}
-            <path d="M 400 580 Q 460 600 520 620 T 620 630" stroke="url(#rootGlow)" strokeWidth="0.8" />
-          </g>
-
-          {/* Tree of Life Branches */}
-          <g strokeWidth="1" strokeLinecap="round">
-            {/* Central branch */}
-            <motion.path 
-              d="M 400 160 Q 400 110 400 60 T 400 10" 
-              stroke="url(#branchGlow)"
-              animate={{ strokeWidth: [1, 1.3, 1], opacity: [0.8, 1, 0.8] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <path d="M 400 110 Q 385 80 370 50" stroke="url(#branchGlow)" />
-            <path d="M 400 80 Q 415 50 430 20" stroke="url(#branchGlow)" />
-
-            {/* Left branch 1 */}
-            <motion.path 
-              d="M 400 160 Q 360 120 310 90 T 230 65" 
-              stroke="url(#branchGlow)"
-              animate={{ strokeWidth: [0.8, 1.1, 0.8] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-            />
-            <path d="M 335 105 Q 300 80 260 65" stroke="url(#branchGlow)" />
-
-            {/* Left branch 2 */}
-            <path d="M 400 160 Q 330 140 260 120 T 160 100" stroke="url(#branchGlow)" strokeWidth="0.8" />
-
-            {/* Right branch 1 */}
-            <motion.path 
-              d="M 400 160 Q 440 120 490 90 T 570 65" 
-              stroke="url(#branchGlow)"
-              animate={{ strokeWidth: [0.8, 1.1, 0.8] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
-            />
-            <path d="M 465 105 Q 500 80 540 65" stroke="url(#branchGlow)" />
-
-            {/* Right branch 2 */}
-            <path d="M 400 160 Q 470 140 540 120 T 640 100" stroke="url(#branchGlow)" strokeWidth="0.8" />
-          </g>
-
-          {/* Meditating Body Silhouette */}
-          <g strokeWidth="1.2" fill="none">
-            {/* Left Side Silhouette */}
-            <motion.path
-              d="M 400 130 C 370 130, 360 180, 360 210 C 360 230, 370 250, 370 260 C 330 270, 310 290, 305 330 C 300 370, 330 400, 330 460 C 330 500, 270 540, 260 570 C 250 600, 280 610, 320 610 C 360 610, 380 590, 400 590"
-              stroke="rgba(13, 148, 136, 0.12)"
-              animate={{ strokeWidth: [1, 1.3, 1], stroke: ["rgba(13, 148, 136, 0.12)", "rgba(13, 148, 136, 0.18)", "rgba(13, 148, 136, 0.12)"] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            />
-            {/* Right Side Silhouette */}
-            <motion.path
-              d="M 400 130 C 430 130, 440 180, 440 210 C 440 230, 430 250, 430 260 C 470 270, 490 290, 495 330 C 500 370, 470 400, 470 460 C 470 500, 530 540, 540 570 C 550 600, 520 610, 480 610 C 440 610, 420 590, 400 590"
-              stroke="rgba(13, 148, 136, 0.12)"
-              animate={{ strokeWidth: [1, 1.3, 1], stroke: ["rgba(13, 148, 136, 0.12)", "rgba(13, 148, 136, 0.18)", "rgba(13, 148, 136, 0.12)"] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            />
-          </g>
-
-          {/* Central Spine Nadi (Sushumna) */}
-          <line
-            x1="400"
-            y1="130"
-            x2="400"
-            y2="600"
-            stroke="url(#spineGlow)"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-
-          {/* Ida Nadi (Cooling Channel, Left Wave First) */}
-          <motion.path
-            d="M 400 580 C 350 560, 350 530, 400 510 C 450 490, 450 460, 400 440 C 350 420, 350 390, 400 370 C 450 350, 450 320, 400 300 C 350 280, 350 250, 400 230 C 450 210, 450 180, 400 160"
-            fill="none"
-            stroke="url(#idaGlow)"
-            strokeWidth="1.5"
-            strokeDasharray="6, 6"
-            animate={{ strokeDashoffset: [0, -120] }}
-            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-          />
-
-          {/* Pingala Nadi (Heating Channel, Right Wave First) */}
-          <motion.path
-            d="M 400 580 C 450 560, 450 530, 400 510 C 350 490, 350 460, 400 440 C 450 420, 450 390, 400 370 C 350 350, 350 320, 400 300 C 450 280, 450 250, 400 230 C 350 210, 350 180, 400 160"
-            fill="none"
-            stroke="url(#pingalaGlow)"
-            strokeWidth="1.5"
-            strokeDasharray="6, 6"
-            animate={{ strokeDashoffset: [0, 120] }}
-            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-          />
-
-          {/* Sacred Geometry: Concentric Rings around Heart and Crown */}
-          {/* Heart Chakra Rings */}
-          <g>
-            <motion.circle
-              cx={400}
-              cy={370}
-              r={40}
-              fill="none"
-              stroke="rgba(110, 231, 183, 0.16)"
-              strokeWidth="0.8"
-              strokeDasharray="6, 4"
-              style={{ transformOrigin: "400px 370px" }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-            />
-            <motion.circle
-              cx={400}
-              cy={370}
-              r={28}
-              fill="none"
-              stroke="rgba(110, 231, 183, 0.12)"
-              strokeWidth="0.8"
-              strokeDasharray="3, 5"
-              style={{ transformOrigin: "400px 370px" }}
-              animate={{ rotate: -360 }}
-              transition={{ duration: 16, repeat: Infinity, ease: "linear" }}
-            />
-          </g>
-
-          {/* Crown Chakra Rings */}
-          <g>
-            <motion.circle
-              cx={400}
-              cy={160}
-              r={36}
-              fill="none"
-              stroke="rgba(214, 188, 250, 0.16)"
-              strokeWidth="0.8"
-              strokeDasharray="5, 3"
-              style={{ transformOrigin: "400px 160px" }}
-              animate={{ rotate: -360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            />
-            <motion.circle
-              cx={400}
-              cy={160}
-              r={22}
-              fill="none"
-              stroke="rgba(214, 188, 250, 0.12)"
-              strokeWidth="0.8"
-              strokeDasharray="2, 4"
-              style={{ transformOrigin: "400px 160px" }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-            />
-          </g>
-
-          {/* Chakras */}
-          {[
-            { name: "Crown", y: 160, color: "#D6BCFA" },
-            { name: "Third Eye", y: 230, color: "#90CDF4" },
-            { name: "Throat", y: 300, color: "#67E8F9" },
-            { name: "Heart", y: 370, color: "#6EE7B7" },
-            { name: "Solar Plexus", y: 440, color: "#FCD34D" },
-            { name: "Sacral", y: 510, color: "#FDBA74" },
-            { name: "Root", y: 580, color: "#FCA5A5" }
-          ].map((chakra, idx) => (
-            <g key={`chakra-${chakra.name}`}>
-              {/* Outer pulsing energy field */}
-              <motion.circle
-                cx={400}
-                cy={chakra.y}
-                r={11}
-                fill={chakra.color}
-                opacity={0.25}
-                animate={{
-                  scale: [1, 1.45, 1],
-                  opacity: [0.15, 0.45, 0.15]
-                }}
-                transition={{
-                  duration: 3.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: idx * 0.4
-                }}
-              />
-              {/* Core solid energy node */}
-              <circle
-                cx={400}
-                cy={chakra.y}
-                r={3.5}
-                fill={chakra.color}
-                stroke="#FFF"
-                strokeWidth="0.8"
-              />
-            </g>
-          ))}
-
-          {/* Rising Prana Sparkles */}
-          {[...Array(12)].map((_, i) => {
-            const size = 1.2 + (i % 2) * 0.8; // 1.2px to 2px
-            const delay = i * 1.5;
-            const startX = 385 + (i * 7) % 30; // clustered around the spine (x=385 to 415)
-            const startY = 570 - (i * 35) % 380; // start at various heights
-            
-            return (
-              <motion.circle
-                key={`prana-${i}`}
-                cx={startX}
-                cy={startY}
-                r={size}
-                fill="rgba(110, 231, 183, 0.55)"
-                initial={{ opacity: 0, y: 0 }}
-                animate={{
-                  opacity: [0, 0.7, 0.7, 0],
-                  y: [-90, -180],
-                  x: [0, (i % 2 === 0 ? 10 : -10), 0]
-                }}
-                transition={{
-                  duration: 7 + (i % 3) * 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: delay,
-                }}
-              />
-            );
-          })}
-        </svg>
-      </div>
-
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full z-10 my-auto">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           
           {/* Left Text Narrative */}
-          <div className="lg:col-span-6 space-y-8 text-left">
+          <div className="lg:col-span-6 space-y-8 text-left relative min-h-[500px] flex flex-col justify-center">
+            {/* Live Tree of Life & Meditating Chakra Energy Body Animation - placed behind text, away from right image */}
+            <div className="absolute inset-0 lg:-left-24 lg:-right-24 xl:-left-32 xl:-right-32 -z-10 pointer-events-none flex items-center justify-center overflow-visible">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 800 800"
+                className="w-full h-full max-w-[650px] max-h-[650px] opacity-95 md:opacity-100 transition-opacity duration-500 scale-[1.05] sm:scale-115"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient id="spineGlow" x1="0" y1="1" x2="0" y2="0">
+                    <stop offset="0%" stopColor="#FECACA" stopOpacity="1.0" />
+                    <stop offset="16%" stopColor="#FED7AA" stopOpacity="1.0" />
+                    <stop offset="33%" stopColor="#FDE68A" stopOpacity="1.0" />
+                    <stop offset="50%" stopColor="#34D399" stopOpacity="1.0" />
+                    <stop offset="66%" stopColor="#67E8F9" stopOpacity="1.0" />
+                    <stop offset="83%" stopColor="#9333EA" stopOpacity="1.0" />
+                    <stop offset="100%" stopColor="#C084FC" stopOpacity="1.0" />
+                  </linearGradient>
+                  <linearGradient id="rootGlow" x1="0.5" y1="0" x2="0.5" y2="1">
+                    <stop offset="0%" stopColor="#10B981" stopOpacity="0.95" />
+                    <stop offset="100%" stopColor="#047857" stopOpacity="0.3" />
+                  </linearGradient>
+                  <linearGradient id="branchGlow" x1="0.5" y1="1" x2="0.5" y2="0">
+                    <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.95" />
+                    <stop offset="100%" stopColor="#4F46E5" stopOpacity="0.3" />
+                  </linearGradient>
+                  <linearGradient id="idaGlow" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#06B6D4" stopOpacity="0.95" />
+                    <stop offset="100%" stopColor="#1D4ED8" stopOpacity="0.4" />
+                  </linearGradient>
+                  <linearGradient id="pingalaGlow" x1="1" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#F97316" stopOpacity="0.95" />
+                    <stop offset="100%" stopColor="#DC2626" stopOpacity="0.4" />
+                  </linearGradient>
+                </defs>
+
+                {/* Tree of Life Roots */}
+                <g strokeWidth="2.2" strokeLinecap="round">
+                  {/* Central root */}
+                  <motion.path 
+                    d="M 400 580 Q 400 640 400 700 T 400 760" 
+                    stroke="url(#rootGlow)"
+                    animate={{ strokeWidth: [2.2, 3.5, 2.2], opacity: [0.85, 1, 0.85] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  <path d="M 400 640 Q 385 680 375 720" stroke="url(#rootGlow)" strokeWidth="1.8" />
+                  <path d="M 400 670 Q 415 710 425 740" stroke="url(#rootGlow)" strokeWidth="1.8" />
+
+                  {/* Left root 1 */}
+                  <motion.path 
+                    d="M 400 580 Q 370 630 330 670 T 260 710" 
+                    stroke="url(#rootGlow)"
+                    animate={{ strokeWidth: [1.8, 2.6, 1.8] }}
+                    transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                  />
+                  <path d="M 350 650 Q 320 690 280 710" stroke="url(#rootGlow)" strokeWidth="1.8" />
+
+                  {/* Left root 2 */}
+                  <path d="M 400 580 Q 340 600 280 620 T 180 630" stroke="url(#rootGlow)" strokeWidth="1.8" />
+
+                  {/* Right root 1 */}
+                  <motion.path 
+                    d="M 400 580 Q 430 630 470 670 T 540 710" 
+                    stroke="url(#rootGlow)"
+                    animate={{ strokeWidth: [1.8, 2.6, 1.8] }}
+                    transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  />
+                  <path d="M 450 650 Q 480 690 520 710" stroke="url(#rootGlow)" strokeWidth="1.8" />
+
+                  {/* Right root 2 */}
+                  <path d="M 400 580 Q 460 600 520 620 T 620 630" stroke="url(#rootGlow)" strokeWidth="1.8" />
+                </g>
+
+                {/* Tree of Life Branches */}
+                <g strokeWidth="2.2" strokeLinecap="round">
+                  {/* Central branch */}
+                  <motion.path 
+                    d="M 400 160 Q 400 110 400 60 T 400 10" 
+                    stroke="url(#branchGlow)"
+                    animate={{ strokeWidth: [2.2, 3.5, 2.2], opacity: [0.9, 1, 0.9] }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  <path d="M 400 110 Q 385 80 370 50" stroke="url(#branchGlow)" strokeWidth="1.8" />
+                  <path d="M 400 80 Q 415 50 430 20" stroke="url(#branchGlow)" strokeWidth="1.8" />
+
+                  {/* Left branch 1 */}
+                  <motion.path 
+                    d="M 400 160 Q 360 120 310 90 T 230 65" 
+                    stroke="url(#branchGlow)"
+                    animate={{ strokeWidth: [1.8, 2.6, 1.8] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                  />
+                  <path d="M 335 105 Q 300 80 260 65" stroke="url(#branchGlow)" strokeWidth="1.8" />
+
+                  {/* Left branch 2 */}
+                  <path d="M 400 160 Q 330 140 260 120 T 160 100" stroke="url(#branchGlow)" strokeWidth="1.8" />
+
+                  {/* Right branch 1 */}
+                  <motion.path 
+                    d="M 400 160 Q 440 120 490 90 T 570 65" 
+                    stroke="url(#branchGlow)"
+                    animate={{ strokeWidth: [1.8, 2.6, 1.8] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+                  />
+                  <path d="M 465 105 Q 500 80 540 65" stroke="url(#branchGlow)" strokeWidth="1.8" />
+
+                  {/* Right branch 2 */}
+                  <path d="M 400 160 Q 470 140 540 120 T 640 100" stroke="url(#branchGlow)" strokeWidth="1.8" />
+                </g>
+
+                {/* Meditating Body Silhouette */}
+                <g strokeWidth="3.2" fill="none">
+                  {/* Left Side Silhouette */}
+                  <motion.path
+                    d="M 400 130 C 370 130, 360 180, 360 210 C 360 230, 370 250, 370 260 C 330 270, 310 290, 305 330 C 300 370, 330 400, 330 460 C 330 500, 270 540, 260 570 C 250 600, 280 610, 320 610 C 360 610, 380 590, 400 590"
+                    stroke="rgba(13, 148, 136, 0.65)"
+                    animate={{ strokeWidth: [3, 4.2, 3], stroke: ["rgba(13, 148, 136, 0.6)", "rgba(13, 148, 136, 0.85)", "rgba(13, 148, 136, 0.6)"] }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  {/* Right Side Silhouette */}
+                  <motion.path
+                    d="M 400 130 C 430 130, 440 180, 440 210 C 440 230, 430 250, 430 260 C 470 270, 490 290, 495 330 C 500 370, 470 400, 470 460 C 470 500, 530 540, 540 570 C 550 600, 520 610, 480 610 C 440 610, 420 590, 400 590"
+                    stroke="rgba(13, 148, 136, 0.65)"
+                    animate={{ strokeWidth: [3, 4.2, 3], stroke: ["rgba(13, 148, 136, 0.6)", "rgba(13, 148, 136, 0.85)", "rgba(13, 148, 136, 0.6)"] }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  />
+                </g>
+
+                {/* Central Spine Nadi (Sushumna) */}
+                <line
+                  x1="400"
+                  y1="130"
+                  x2="400"
+                  y2="600"
+                  stroke="url(#spineGlow)"
+                  strokeWidth="4.5"
+                  strokeLinecap="round"
+                />
+
+                {/* Ida Nadi (Cooling Channel, Left Wave First) */}
+                <motion.path
+                  d="M 400 580 C 350 560, 350 530, 400 510 C 450 490, 450 460, 400 440 C 350 420, 350 390, 400 370 C 450 350, 450 320, 400 300 C 350 280, 350 250, 400 230 C 450 210, 450 180, 400 160"
+                  fill="none"
+                  stroke="url(#idaGlow)"
+                  strokeWidth="3.8"
+                  strokeDasharray="10, 5"
+                  animate={{ strokeDashoffset: [0, -120] }}
+                  transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                />
+
+                {/* Pingala Nadi (Heating Channel, Right Wave First) */}
+                <motion.path
+                  d="M 400 580 C 450 560, 450 530, 400 510 C 350 490, 350 460, 400 440 C 450 420, 450 390, 400 370 C 350 350, 350 320, 400 300 C 450 280, 450 250, 400 230 C 350 210, 350 180, 400 160"
+                  fill="none"
+                  stroke="url(#pingalaGlow)"
+                  strokeWidth="3.8"
+                  strokeDasharray="10, 5"
+                  animate={{ strokeDashoffset: [0, 120] }}
+                  transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                />
+
+                {/* Sacred Geometry: Concentric Rings around Heart and Crown */}
+                {/* Heart Chakra Rings */}
+                <g>
+                  <motion.circle
+                    cx={400}
+                    cy={370}
+                    r={45}
+                    fill="none"
+                    stroke="rgba(16, 185, 129, 0.75)"
+                    strokeWidth="1.8"
+                    strokeDasharray="8, 4"
+                    style={{ transformOrigin: "400px 370px" }}
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                  />
+                  <motion.circle
+                    cx={400}
+                    cy={370}
+                    r={32}
+                    fill="none"
+                    stroke="rgba(16, 185, 129, 0.55)"
+                    strokeWidth="1.8"
+                    strokeDasharray="4, 6"
+                    style={{ transformOrigin: "400px 370px" }}
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 16, repeat: Infinity, ease: "linear" }}
+                  />
+                </g>
+
+                {/* Crown Chakra Rings */}
+                <g>
+                  <motion.circle
+                    cx={400}
+                    cy={160}
+                    r={42}
+                    fill="none"
+                    stroke="rgba(168, 85, 247, 0.75)"
+                    strokeWidth="1.8"
+                    strokeDasharray="7, 3"
+                    style={{ transformOrigin: "400px 160px" }}
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  />
+                  <motion.circle
+                    cx={400}
+                    cy={160}
+                    r={26}
+                    fill="none"
+                    stroke="rgba(168, 85, 247, 0.55)"
+                    strokeWidth="1.8"
+                    strokeDasharray="3, 4"
+                    style={{ transformOrigin: "400px 160px" }}
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                  />
+                </g>
+
+                {/* Chakras */}
+                {[
+                  { name: "Crown", y: 160, color: "#C084FC" },
+                  { name: "Third Eye", y: 230, color: "#60A5FA" },
+                  { name: "Throat", y: 300, color: "#22D3EE" },
+                  { name: "Heart", y: 370, color: "#34D399" }, // emerald green
+                  { name: "Solar Plexus", y: 440, color: "#FBBF24" }, // amber yellow
+                  { name: "Sacral", y: 510, color: "#FB923C" }, // orange
+                  { name: "Root", y: 580, color: "#EF4444" } // red
+                ].map((chakra, idx) => (
+                  <g key={`chakra-${chakra.name}`}>
+                    {/* Outer pulsing energy field */}
+                    <motion.circle
+                      cx={400}
+                      cy={chakra.y}
+                      r={24}
+                      fill={chakra.color}
+                      opacity={0.65}
+                      animate={{
+                        scale: [1, 1.8, 1],
+                        opacity: [0.35, 0.85, 0.35]
+                      }}
+                      transition={{
+                        duration: 3.5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: idx * 0.4
+                      }}
+                    />
+                    {/* Core solid energy node */}
+                    <circle
+                      cx={400}
+                      cy={chakra.y}
+                      r={7.5}
+                      fill={chakra.color}
+                      stroke="#FFF"
+                      strokeWidth="1.8"
+                    />
+                  </g>
+                ))}
+
+                {/* Rising Prana Sparkles */}
+                {[...Array(12)].map((_, i) => {
+                  const size = 2.5 + (i % 2) * 1.5; // 2.5px to 4px
+                  const delay = i * 1.5;
+                  const startX = 385 + (i * 7) % 30; // clustered around the spine (x=385 to 415)
+                  const startY = 570 - (i * 35) % 380; // start at various heights
+                  
+                  return (
+                    <motion.circle
+                      key={`prana-${i}`}
+                      cx={startX}
+                      cy={startY}
+                      r={size}
+                      fill="rgba(16, 185, 129, 0.95)" // brighter emerald prana
+                      initial={{ opacity: 0, y: 0 }}
+                      animate={{
+                        opacity: [0, 1.0, 1.0, 0],
+                        y: [-90, -180],
+                        x: [0, (i % 2 === 0 ? 12 : -12), 0]
+                      }}
+                      transition={{
+                        duration: 7 + (i % 3) * 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: delay,
+                      }}
+                    />
+                  );
+                })}
+              </svg>
+            </div>
+
             {/* Pill Tag */}
             <motion.div 
               initial={{ opacity: 0, y: 15 }}
