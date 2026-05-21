@@ -1,0 +1,6 @@
+{
+  "name": "Shiva Shakthi Health",
+  "description": "Precision Longevity & Integrated Healthcare Center website with advanced diagnostics and metabolic treatments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
