@@ -9,7 +9,7 @@ interface HeroSectionProps {
 export default function HeroSection({ onStartJourneyClick, onExploreScienceClick }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden bg-bg-azure py-16 lg:py-24 flex flex-col items-center justify-center min-h-[calc(100vh-80px)]">
-      {/* Decorative Aurora Ambient Glow */}
+      {/* Decorative Aurora Ambient Glow with nature-inspired green-teal tints */}
       <motion.div 
         animate={{
           scale: [1, 1.15, 0.9, 1],
@@ -21,7 +21,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="aurora-glow h-96 w-96 bg-cyan-200/30 opacity-70 top-10 left-10 blur-3xl"
+        className="aurora-glow h-96 w-96 bg-emerald-200/25 opacity-70 top-10 left-10 blur-3xl"
       />
       <motion.div 
         animate={{
@@ -35,8 +35,55 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
           ease: "easeInOut",
           delay: 2
         }}
-        className="aurora-glow h-96 w-96 bg-orange-100/30 opacity-60 bottom-10 right-10 blur-3xl"
+        className="aurora-glow h-96 w-96 bg-teal-100/25 opacity-60 bottom-10 right-10 blur-3xl"
       />
+
+      {/* Floating Organic Leaves/Particles Background Animation */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(6)].map((_, i) => {
+          const size = 16 + (i * 8); // varied sizes
+          const delay = i * 1.5;
+          const duration = 22 + (i * 4);
+          const startX = [ "8%", "25%", "88%", "68%", "18%", "92%" ][i];
+          const startY = [ "20%", "75%", "25%", "60%", "45%", "80%" ][i];
+          const moveX = [20, -30, 40, -15, 35, -20];
+          const moveY = [-50, -60, -45, -55, -70, -40];
+          
+          return (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0.5, x: 0, y: 0 }}
+              animate={{
+                opacity: [0, 0.35, 0.35, 0],
+                scale: [0.8, 1.25, 0.95, 0.8],
+                x: [0, moveX[i], moveX[i] * 1.5, 0],
+                y: [0, moveY[i], moveY[i] * 2, moveY[i] * 2.5],
+                rotate: [0, 45, 90, 135]
+              }}
+              transition={{
+                duration: duration,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: delay,
+              }}
+              className="absolute text-[#16827D]/12"
+              style={{
+                left: startX,
+                top: startY,
+              }}
+            >
+              <svg
+                width={size}
+                height={size}
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M17,8C8,10 5.9,16.17 3.82,21.34L2.18,21C4.3,15.89 6.1,9.35 15,7C10.96,6.38 7.31,7.37 4.54,8.82L3.46,6.82C6.67,5.14 11.23,4.24 16,5C12.44,3.72 8.53,3.74 5.37,5L4.63,3.13C8.42,1.38 13.17,1.4 17.5,3C19.24,5.62 19.33,9.03 17,12.5C18.67,9.67 18.67,8.33 17,8Z" />
+              </svg>
+            </motion.div>
+          );
+        })}
+      </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full z-10 my-auto">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
