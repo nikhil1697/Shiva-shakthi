@@ -44,15 +44,16 @@ export default function PromoGlow() {
             whileHover={{ y: -6, transition: { duration: 0.2 } }}
             className="relative overflow-hidden rounded-3xl h-[280px] group shadow-xl flex flex-col justify-end p-6 text-left cursor-pointer border border-white/10"
           >
-            <div className="absolute inset-0 z-10 bg-navy-dark/75 transition-opacity duration-500 group-hover:opacity-80"></div>
-            <motion.img
-              src="https://images.unsplash.com/photo-1579684389781-75601b228122?auto=format&fit=crop&q=80&w=600"
-              alt="Medical precision robotics"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="absolute inset-0 h-full w-full object-cover mix-blend-overlay"
-              referrerPolicy="no-referrer"
-            />
+            {/* Background Image Layer */}
+            <div className="absolute inset-0 z-0">
+              <img
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600"
+                alt="Medical precision laboratory"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-navy-dark/75 transition-opacity duration-500 group-hover:bg-navy-dark/70"></div>
+            </div>
             
             {/* Visual accent badge */}
             <div className="absolute top-6 left-6 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-turquoise-brand/20 backdrop-blur-md text-turquoise-brand border border-turquoise-brand/10">
@@ -73,24 +74,35 @@ export default function PromoGlow() {
           <motion.div 
             variants={cardVariants}
             whileHover={{ y: -6, transition: { duration: 0.2 } }}
-            className="rounded-3xl bg-white/70 backdrop-blur-md p-6 shadow-xl border border-white/80 flex flex-col justify-between text-left cursor-pointer transition-shadow hover:shadow-2xl"
+            className="relative overflow-hidden rounded-3xl bg-white/60 backdrop-blur-md p-6 shadow-xl border border-white/80 flex flex-col justify-between text-left cursor-pointer transition-shadow hover:shadow-2xl h-[280px]"
           >
+            {/* Background Image Layer with light overlay */}
+            <div className="absolute inset-0 z-0">
+              <img
+                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=600"
+                alt="Board-Certified Specialists"
+                className="h-full w-full object-cover opacity-15 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-20"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-white/60"></div>
+            </div>
+
             {/* Badge Icon */}
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E0F7F6] text-[#006A66] shadow-inner">
+            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-[#E0F7F6]/90 text-[#006A66] shadow-inner">
               <Users className="h-5 w-5" />
             </div>
 
-            <div className="my-5 space-y-2">
+            <div className="relative z-10 my-3 space-y-2">
               <h4 className="text-xl font-serif font-bold text-navy-dark tracking-tight">
                 Board-Certified Specialists
               </h4>
-              <p className="text-xs leading-relaxed text-gray-500 font-sans">
+              <p className="text-xs leading-relaxed text-gray-600 font-sans">
                 Our multi-disciplinary team consists of world-renowned experts in GI, Metabolic Health, and Longevity Science.
               </p>
             </div>
 
             {/* Avatar Stack Facepile */}
-            <div className="flex items-center gap-3">
+            <div className="relative z-10 flex items-center gap-3">
               <div className="flex -space-x-2.5 overflow-hidden">
                 {avatars.map((avatar, idx) => (
                   <motion.img
@@ -119,11 +131,22 @@ export default function PromoGlow() {
             whileHover={{ y: -6, transition: { duration: 0.2 } }}
             className="relative overflow-hidden rounded-3xl h-[280px] bg-gradient-to-tr from-[#072428] via-[#004D4A] to-[#2FB7B1] p-6 text-left flex flex-col justify-between group shadow-xl cursor-pointer border border-white/5"
           >
+            {/* Background Image Layer with teal overlay */}
+            <div className="absolute inset-0 z-0">
+              <img
+                src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=600"
+                alt="Functional Focus"
+                className="h-full w-full object-cover opacity-20 mix-blend-overlay transition-transform duration-700 group-hover:scale-105"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#072428]/90 via-[#004D4A]/85 to-[#2FB7B1]/80 z-0"></div>
+            </div>
+
             {/* Gradient background animated glow circles */}
-            <div className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-white/5 blur-xl group-hover:scale-120 transition-transform duration-700"></div>
+            <div className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-white/5 blur-xl group-hover:scale-120 transition-transform duration-700 z-0"></div>
 
             {/* Badge Icon */}
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md border border-white/10 shadow-inner">
+            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md border border-white/10 shadow-inner">
               <Activity className="h-5 w-5 animate-pulse" />
             </div>
 

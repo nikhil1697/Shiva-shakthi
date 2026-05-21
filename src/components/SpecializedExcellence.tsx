@@ -9,7 +9,8 @@ export default function SpecializedExcellence() {
       tagline: 'Advanced endoscopy, gut microbiome analysis, and comprehensive digestive health protocols.',
       bullets: ['IBD Management', 'Advanced Endoscopy'],
       icon: Activity,
-      themeColor: 'cyan'
+      themeColor: 'cyan',
+      imageUrl: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600'
     },
     {
       id: 'diabeto',
@@ -17,7 +18,8 @@ export default function SpecializedExcellence() {
       tagline: 'Personalized reversal programs and precision glucose monitoring for metabolic resilience.',
       bullets: ['CGM Integration', 'Reversal Protocols'],
       icon: Droplet,
-      themeColor: 'orange'
+      themeColor: 'orange',
+      imageUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=600'
     },
     {
       id: 'endocrino',
@@ -25,7 +27,8 @@ export default function SpecializedExcellence() {
       tagline: 'Optimizing hormonal balance for energy, mood, and long-term vitality.',
       bullets: ['Thyroid Health', 'Hormonal Balancing'],
       icon: HeartPulse,
-      themeColor: 'violet'
+      themeColor: 'violet',
+      imageUrl: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&q=80&w=600'
     }
   ];
 
@@ -100,11 +103,22 @@ export default function SpecializedExcellence() {
                 whileHover={{ y: -8 }}
                 className="group relative flex flex-col justify-between overflow-hidden rounded-3xl dark-glassmorphic-card p-8 cursor-pointer transition-colors duration-500 hover:bg-navy-light/40 border border-white/10"
               >
+                {/* Background Image with Dark Overlay */}
+                <div className="absolute inset-0 z-0">
+                  <img
+                    src={path.imageUrl}
+                    alt={path.title}
+                    className="h-full w-full object-cover opacity-15 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-25"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/95 to-navy-dark/60"></div>
+                </div>
+
                 {/* Accent neon corner glow */}
-                <div className={`absolute -top-12 -left-12 w-24 h-24 rounded-full ${getGlowBg(path.themeColor)} blur-xl group-hover:scale-150 transition-transform duration-500`} />
+                <div className={`absolute -top-12 -left-12 w-24 h-24 rounded-full ${getGlowBg(path.themeColor)} blur-xl group-hover:scale-150 transition-transform duration-500 z-0`} />
 
                 {/* Left side colored border marker */}
-                <div className="absolute left-0 top-0 h-full w-1 origin-top scale-y-0 bg-gradient-to-b from-turquoise-brand to-orange-vitality transition-transform duration-500 group-hover:scale-y-100"></div>
+                <div className="absolute left-0 top-0 h-full w-1 origin-top scale-y-0 bg-gradient-to-b from-turquoise-brand to-orange-vitality transition-transform duration-500 group-hover:scale-y-100 z-10"></div>
 
                 <div className="relative z-10">
                   {/* Icon Emblem */}
@@ -136,7 +150,7 @@ export default function SpecializedExcellence() {
                 </div>
 
                 {/* Chevron Trigger slide reveal */}
-                <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-bold tracking-widest text-[#2FB7B1] uppercase font-sans overflow-hidden">
+                <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-bold tracking-widest text-[#2FB7B1] uppercase font-sans overflow-hidden z-10">
                   <span className="translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                     Pathway Protocol Active
                   </span>

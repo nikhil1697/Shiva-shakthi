@@ -240,7 +240,7 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-black tracking-widest text-[#2FB7B1] uppercase">VIBRANT SANCTUARY</div>
+                  <div className="text-[10px] font-black tracking-widest text-[#2FB7B1] uppercase">SHIVA SHAKTHI HEALTH</div>
                   <p className="text-xs text-gray-300 leading-relaxed font-medium">
                     45, Precision Lane, Bangalore, India
                   </p>
