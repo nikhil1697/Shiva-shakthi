@@ -9,56 +9,58 @@ interface HeroSectionProps {
 export default function HeroSection({ onStartJourneyClick, onExploreScienceClick }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden bg-bg-azure py-16 lg:py-24 flex flex-col items-center justify-center min-h-[calc(100vh-80px)]">
-      {/* Decorative Aurora Ambient Glow with nature-inspired green-teal tints */}
+      {/* Decorative Aurora Ambient Glow with nature-inspired green-teal tints - made more visible */}
       <motion.div 
         animate={{
-          scale: [1, 1.15, 0.9, 1],
-          x: [0, 30, -20, 0],
-          y: [0, -40, 20, 0],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="aurora-glow h-96 w-96 bg-emerald-200/25 opacity-70 top-10 left-10 blur-3xl"
-      />
-      <motion.div 
-        animate={{
-          scale: [1, 0.85, 1.1, 1],
-          x: [0, -40, 30, 0],
-          y: [0, 30, -30, 0],
+          scale: [1, 1.25, 0.85, 1],
+          x: [0, 45, -35, 0],
+          y: [0, -55, 35, 0],
         }}
         transition={{
           duration: 20,
           repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2
+          ease: "easeInOut"
         }}
-        className="aurora-glow h-96 w-96 bg-teal-100/25 opacity-60 bottom-10 right-10 blur-3xl"
+        className="aurora-glow h-96 w-96 bg-emerald-200/40 top-10 left-10"
+      />
+      <motion.div 
+        animate={{
+          scale: [1, 0.8, 1.25, 1],
+          x: [0, -55, 45, 0],
+          y: [0, 45, -45, 0],
+        }}
+        transition={{
+          duration: 16,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1
+        }}
+        className="aurora-glow h-96 w-96 bg-teal-200/30 bottom-10 right-10"
       />
 
-      {/* Floating Organic Leaves/Particles Background Animation */}
+      {/* Floating Organic Leaves & Bokeh Bubbles Background Animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(6)].map((_, i) => {
-          const size = 16 + (i * 8); // varied sizes
+        {/* Floating Leaves */}
+        {[...Array(8)].map((_, i) => {
+          const size = 20 + (i * 8); // varied sizes from 20px to 76px
           const delay = i * 1.5;
-          const duration = 22 + (i * 4);
-          const startX = [ "8%", "25%", "88%", "68%", "18%", "92%" ][i];
-          const startY = [ "20%", "75%", "25%", "60%", "45%", "80%" ][i];
-          const moveX = [20, -30, 40, -15, 35, -20];
-          const moveY = [-50, -60, -45, -55, -70, -40];
+          const duration = 18 + (i * 4);
+          // Distribute across horizontal and vertical space
+          const startX = [ "8%", "25%", "85%", "60%", "15%", "90%", "45%", "70%" ][i];
+          const startY = [ "15%", "75%", "20%", "65%", "40%", "80%", "30%", "85%" ][i];
+          const moveX = [35, -45, 40, -30, 45, -20, 30, -35];
+          const moveY = [-70, -90, -65, -80, -100, -75, -85, -95];
           
           return (
             <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.5, x: 0, y: 0 }}
+              key={`leaf-${i}`}
+              initial={{ opacity: 0, scale: 0.6, x: 0, y: 0 }}
               animate={{
-                opacity: [0, 0.35, 0.35, 0],
-                scale: [0.8, 1.25, 0.95, 0.8],
-                x: [0, moveX[i], moveX[i] * 1.5, 0],
-                y: [0, moveY[i], moveY[i] * 2, moveY[i] * 2.5],
-                rotate: [0, 45, 90, 135]
+                opacity: [0, 0.35, 0.35, 0], // beautifully visible but subtle
+                scale: [0.8, 1.1, 1, 0.8],
+                x: [0, moveX[i], moveX[i] * 1.6, moveX[i] * 2],
+                y: [0, moveY[i], moveY[i] * 1.8, moveY[i] * 2.2],
+                rotate: [0, 60, 140, 220]
               }}
               transition={{
                 duration: duration,
@@ -66,7 +68,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                 ease: "easeInOut",
                 delay: delay,
               }}
-              className="absolute text-[#16827D]/12"
+              className="absolute text-turquoise-light"
               style={{
                 left: startX,
                 top: startY,
@@ -81,6 +83,43 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                 <path d="M17,8C8,10 5.9,16.17 3.82,21.34L2.18,21C4.3,15.89 6.1,9.35 15,7C10.96,6.38 7.31,7.37 4.54,8.82L3.46,6.82C6.67,5.14 11.23,4.24 16,5C12.44,3.72 8.53,3.74 5.37,5L4.63,3.13C8.42,1.38 13.17,1.4 17.5,3C19.24,5.62 19.33,9.03 17,12.5C18.67,9.67 18.67,8.33 17,8Z" />
               </svg>
             </motion.div>
+          );
+        })}
+
+        {/* Floating Bokeh Bubbles (nature energy orbs) */}
+        {[...Array(6)].map((_, i) => {
+          const size = 12 + (i * 6); // size 12px to 42px
+          const delay = i * 2;
+          const duration = 15 + (i * 5);
+          const startX = [ "12%", "80%", "40%", "92%", "20%", "70%" ][i];
+          const startY = [ "85%", "70%", "90%", "30%", "50%", "40%" ][i];
+          const moveX = [20, -30, 15, -20, 25, -15];
+          const moveY = [-120, -100, -140, -90, -110, -130];
+          
+          return (
+            <motion.div
+              key={`bubble-${i}`}
+              initial={{ opacity: 0, scale: 0.5, x: 0, y: 0 }}
+              animate={{
+                opacity: [0, 0.4, 0.4, 0],
+                scale: [0.8, 1.2, 1, 0.8],
+                x: [0, moveX[i], moveX[i] * 1.5, moveX[i] * 2],
+                y: [0, moveY[i], moveY[i] * 1.5, moveY[i] * 2],
+              }}
+              transition={{
+                duration: duration,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: delay,
+              }}
+              className="absolute rounded-full bg-emerald-400/20 blur-[1.5px]"
+              style={{
+                width: size,
+                height: size,
+                left: startX,
+                top: startY,
+              }}
+            />
           );
         })}
       </div>
