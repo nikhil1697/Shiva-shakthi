@@ -79,7 +79,8 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                     <stop offset="100%" stopColor="#D97706" />
                   </linearGradient>
                   <radialGradient id="haloGrad" cx="0.5" cy="0.5" r="0.5">
-                    <stop offset="0%" stopColor="#FBBF24" stopOpacity="0.2" />
+                    <stop offset="0%" stopColor="#FBBF24" stopOpacity="0.5" />
+                    <stop offset="60%" stopColor="#F59E0B" stopOpacity="0.2" />
                     <stop offset="100%" stopColor="#FBBF24" stopOpacity="0" />
                   </radialGradient>
                   <linearGradient id="idaGlow" x1="0" y1="0" x2="1" y2="1">
@@ -307,7 +308,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                     cy={60}
                     r={95}
                     fill="url(#haloGrad)"
-                    animate={{ opacity: [0.5, 0.8, 0.5], scale: [0.95, 1.05, 0.95] }}
+                    animate={{ opacity: [0.6, 0.9, 0.6], scale: [0.95, 1.05, 0.95] }}
                     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                   />
                   {/* Glowing Halo Rings */}
@@ -316,37 +317,107 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                     cy={60}
                     r={70}
                     fill="none"
-                    stroke="rgba(245, 158, 11, 0.35)"
-                    strokeWidth="1"
+                    stroke="rgba(245, 158, 11, 0.45)"
+                    strokeWidth="1.2"
                     strokeDasharray="4, 6"
                     style={{ transformOrigin: "140px 60px" }}
                     animate={{ rotate: 360 }}
                     transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                   />
                   
-                  {/* Goddess Dhanvantari Form Silhouette */}
-                  <g stroke="url(#goldGrad)" strokeWidth="2.2" strokeLinecap="round" fill="none" opacity="0.4">
-                    {/* Crown (Kireeta) */}
-                    <path d="M 132 38 L 140 12 L 148 38 L 143 35 L 140 42 L 137 35 Z" fill="url(#goldGrad)" />
+                  {/* Goddess Dhanvantari Form Silhouette with solid/semi-transparent golden fills for visibility */}
+                  <g filter="url(#goldGlow)" opacity="0.85">
+                    {/* Crown (Kireeta) - Solid gold */}
+                    <path
+                      d="M 132 38 L 140 12 L 148 38 L 143 35 L 140 42 L 137 35 Z"
+                      fill="url(#goldGrad)"
+                      stroke="#D97706"
+                      strokeWidth="1.2"
+                    />
                     {/* Head / Face Profile */}
-                    <path d="M 133 38 Q 128 52 140 52 Q 152 52 147 38" />
+                    <path
+                      d="M 133 38 Q 128 52 140 52 Q 152 52 147 38 Z"
+                      fill="rgba(251, 191, 36, 0.35)"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
                     {/* Hair / Kundala (earrings) */}
-                    <circle cx="129" cy="48" r="2.5" fill="url(#goldGrad)" />
-                    <circle cx="151" cy="48" r="2.5" fill="url(#goldGrad)" />
+                    <circle cx="129" cy="48" r="3" fill="#F59E0B" stroke="#D97706" strokeWidth="0.8" />
+                    <circle cx="151" cy="48" r="3" fill="#F59E0B" stroke="#D97706" strokeWidth="0.8" />
+                    
                     {/* Neck */}
-                    <path d="M 137 52 L 137 62 L 143 62 L 143 52" />
+                    <path
+                      d="M 136 52 L 136 65 L 144 65 L 144 52 Z"
+                      fill="rgba(251, 191, 36, 0.25)"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.2"
+                    />
+                    
                     {/* Torso & Shoulders */}
-                    <path d="M 105 85 C 115 65, 165 65, 175 85 L 165 125 C 160 140, 120 140, 115 125 Z" />
-                    {/* Upper Right Hand (holding Chakra) */}
-                    <path d="M 165 80 C 185 75, 205 65, 205 50" />
-                    <circle cx="205" cy="45" r="7" stroke="#FBBF24" strokeWidth="1.5" strokeDasharray="3,2" />
+                    <path
+                      d="M 105 85 C 115 65, 165 65, 175 85 L 165 125 C 160 140, 120 140, 115 125 Z"
+                      fill="rgba(251, 191, 36, 0.2)"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+
+                    {/* Upper Right Hand (holding rotating Chakra) */}
+                    <path
+                      d="M 165 80 C 185 75, 205 65, 205 50"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+                    <motion.circle
+                      cx="205"
+                      cy="45"
+                      r="8"
+                      stroke="#FBBF24"
+                      strokeWidth="2"
+                      strokeDasharray="4,2"
+                      fill="rgba(251, 191, 36, 0.35)"
+                      style={{ transformOrigin: "205px 45px" }}
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                    />
+                    
                     {/* Upper Left Hand (holding Herb Leaf) */}
-                    <path d="M 115 80 C 95 75, 75 65, 75 50" />
-                    <path d="M 75 50 C 70 42, 80 38, 75 50 Z" fill="#10B981" stroke="#047857" strokeWidth="1" />
+                    <path
+                      d="M 115 80 C 95 75, 75 65, 75 50"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+                    <path
+                      d="M 75 50 C 70 42, 80 38, 75 50 Z"
+                      fill="#10B981"
+                      stroke="#047857"
+                      strokeWidth="1.8"
+                    />
+
                     {/* Lower Left Arm (holding Kalasha base) */}
-                    <path d="M 112 105 C 95 110, 80 115, 65 115" />
+                    <path
+                      d="M 112 105 C 95 110, 80 115, 65 115"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.8"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+                    <circle cx="65" cy="115" r="3" fill="#FBBF24" stroke="url(#goldGrad)" strokeWidth="1" />
+                    
                     {/* Lower Right Arm (pouring Kalasha neck) */}
-                    <path d="M 160 105 C 140 115, 120 125, 100 118" />
+                    <path
+                      d="M 160 105 C 140 115, 120 125, 100 118"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.8"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+                    <circle cx="100" cy="118" r="3" fill="#FBBF24" stroke="url(#goldGrad)" strokeWidth="1" />
                   </g>
                 </g>
 
