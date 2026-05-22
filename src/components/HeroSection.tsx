@@ -49,7 +49,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                 width="100%"
                 height="100%"
                 viewBox="0 0 800 800"
-                className="w-full h-full max-w-[650px] max-h-[650px] opacity-25 md:opacity-30 transition-opacity duration-500 scale-[1.05] sm:scale-115"
+                className="w-full h-full max-w-[650px] max-h-[650px] opacity-45 md:opacity-60 transition-opacity duration-500 scale-[1.05] sm:scale-115"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -78,6 +78,15 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                     <stop offset="50%" stopColor="#F59E0B" />
                     <stop offset="100%" stopColor="#D97706" />
                   </linearGradient>
+                  <linearGradient id="sariGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#16827D" stopOpacity="0.45" />
+                    <stop offset="100%" stopColor="#0B413E" stopOpacity="0.2" />
+                  </linearGradient>
+                  <radialGradient id="whiteShield" cx="0.5" cy="0.5" r="0.5">
+                    <stop offset="0%" stopColor="#EFF4F0" stopOpacity="0.95" />
+                    <stop offset="65%" stopColor="#EFF4F0" stopOpacity="0.8" />
+                    <stop offset="100%" stopColor="#EFF4F0" stopOpacity="0" />
+                  </radialGradient>
                   <radialGradient id="haloGrad" cx="0.5" cy="0.5" r="0.5">
                     <stop offset="0%" stopColor="#FBBF24" stopOpacity="0.5" />
                     <stop offset="60%" stopColor="#F59E0B" stopOpacity="0.2" />
@@ -101,34 +110,197 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                   </filter>
                 </defs>
 
+                {/* Backdrop Shield to maintain text readability and high contrast */}
+                <circle cx="400" cy="420" r="300" fill="url(#whiteShield)" />
+
                 {/* Lotus Flower Base */}
                 <g opacity="0.45" strokeWidth="2" strokeLinecap="round">
                   {/* Back/Outer Petals */}
-                  <path d="M 380 670 C 300 680, 270 640, 260 610 C 290 620, 340 650, 380 670 Z" fill="url(#lotusGrad)" stroke="#10B981" />
-                  <path d="M 380 670 C 460 680, 490 640, 500 610 C 470 620, 420 650, 380 670 Z" fill="url(#lotusGrad)" stroke="#10B981" />
+                  <path d="M 400 720 C 320 730, 290 690, 280 660 C 310 670, 360 700, 400 720 Z" fill="url(#lotusGrad)" stroke="#10B981" />
+                  <path d="M 400 720 C 480 730, 510 690, 520 660 C 490 670, 440 700, 400 720 Z" fill="url(#lotusGrad)" stroke="#10B981" />
                   
                   {/* Mid Petals */}
-                  <path d="M 380 670 C 320 680, 300 630, 310 595 C 330 615, 360 645, 380 670 Z" fill="url(#lotusGrad)" stroke="#34D399" />
-                  <path d="M 380 670 C 440 680, 460 630, 450 595 C 430 615, 400 645, 380 670 Z" fill="url(#lotusGrad)" stroke="#34D399" />
+                  <path d="M 400 720 C 340 730, 320 680, 330 645 C 350 665, 380 695, 400 720 Z" fill="url(#lotusGrad)" stroke="#34D399" />
+                  <path d="M 400 720 C 460 730, 480 680, 470 645 C 450 665, 420 695, 400 720 Z" fill="url(#lotusGrad)" stroke="#34D399" />
                   
                   {/* Front/Center Petals */}
-                  <path d="M 380 670 C 350 675, 335 635, 350 590 C 360 615, 370 645, 380 670 Z" fill="url(#lotusGrad)" stroke="#6EE7B7" />
-                  <path d="M 380 670 C 410 675, 425 635, 410 590 C 400 615, 390 645, 380 670 Z" fill="url(#lotusGrad)" stroke="#6EE7B7" />
-                  <path d="M 380 670 C 365 660, 365 600, 380 575 C 395 600, 395 660, 380 670 Z" fill="url(#lotusGrad)" stroke="#FBBF24" strokeWidth="2.5" />
+                  <path d="M 400 720 C 370 725, 355 685, 370 640 C 380 665, 390 695, 400 720 Z" fill="url(#lotusGrad)" stroke="#6EE7B7" />
+                  <path d="M 400 720 C 430 725, 445 685, 430 640 C 420 665, 410 695, 400 720 Z" fill="url(#lotusGrad)" stroke="#6EE7B7" />
+                  <path d="M 400 720 C 385 710, 385 650, 400 625 C 415 650, 415 710, 400 720 Z" fill="url(#lotusGrad)" stroke="#FBBF24" strokeWidth="2.5" />
+                </g>
+
+                {/* Goddess Dhanvantari Silhouette & Divine Aura */}
+                <g>
+                  {/* Outer Golden Aura */}
+                  <motion.circle
+                    cx={400}
+                    cy={170}
+                    r={90}
+                    fill="url(#haloGrad)"
+                    animate={{ opacity: [0.6, 0.9, 0.6], scale: [0.95, 1.05, 0.95] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  {/* Glowing Halo Rings */}
+                  <motion.circle
+                    cx={400}
+                    cy={170}
+                    r={70}
+                    fill="none"
+                    stroke="rgba(245, 158, 11, 0.45)"
+                    strokeWidth="1.2"
+                    strokeDasharray="4, 6"
+                    style={{ transformOrigin: "400px 170px" }}
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                  />
+                  
+                  {/* Goddess Dhanvantari Form Silhouette */}
+                  <g filter="url(#goldGlow)" opacity="0.95">
+                    {/* Crown (Kireeta) - Solid gold */}
+                    <path
+                      d="M 380 155 L 420 155 L 412 143 L 417 143 L 400 95 L 383 143 L 388 143 Z"
+                      fill="url(#goldGrad)"
+                      stroke="#D97706"
+                      strokeWidth="1.2"
+                    />
+                    {/* Head / Face Profile */}
+                    <path
+                      d="M 388 155 C 382 175, 385 190, 400 190 C 415 190, 418 175, 412 155 Z"
+                      fill="rgba(251, 191, 36, 0.35)"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                    {/* Hair / Kundala (earrings) */}
+                    <circle cx="384" cy="182" r="3.5" fill="#F59E0B" stroke="#D97706" strokeWidth="0.8" />
+                    <circle cx="416" cy="182" r="3.5" fill="#F59E0B" stroke="#D97706" strokeWidth="0.8" />
+                    
+                    {/* Neck */}
+                    <path
+                      d="M 392 190 L 392 212 L 408 212 L 408 190 Z"
+                      fill="rgba(251, 191, 36, 0.25)"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.2"
+                    />
+                    
+                    {/* Torso & Shoulders */}
+                    <path
+                      d="M 345 235 C 360 215, 440 215, 455 235 L 435 340 C 415 365, 385 365, 365 340 Z"
+                      fill="rgba(251, 191, 36, 0.22)"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                    {/* Sari drapery */}
+                    <path
+                      d="M 345 235 C 370 240, 410 280, 435 340 L 420 345 C 390 280, 360 250, 345 235 Z"
+                      fill="url(#sariGrad)"
+                      stroke="#16827D"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                    />
+
+                    {/* Upper Right Arm (holding rotating Chakra) */}
+                    <path
+                      d="M 348 235 C 325 225, 315 210, 320 180"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+                    <g>
+                      <motion.circle
+                        cx="320"
+                        cy="165"
+                        r="14"
+                        stroke="#FBBF24"
+                        strokeWidth="2"
+                        strokeDasharray="6,3"
+                        fill="rgba(251, 191, 36, 0.35)"
+                        style={{ transformOrigin: "320px 165px" }}
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                      />
+                      <circle cx="320" cy="165" r="3" fill="#D97706" />
+                    </g>
+                    
+                    {/* Upper Left Arm (holding Kalasha) */}
+                    <path
+                      d="M 450 235 C 475 225, 485 210, 480 180"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+                    
+                    {/* Lower Left Arm (holding medicine bowl) */}
+                    <path
+                      d="M 455 250 C 485 270, 495 290, 490 320"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+                    <path
+                      d="M 488 318 C 488 328, 502 328, 502 318 Z"
+                      fill="url(#goldGrad)"
+                      stroke="#D97706"
+                      strokeWidth="1.5"
+                    />
+                    <circle cx="495" cy="316" r="3.5" fill="#10B981" />
+
+                    {/* Lower Right Arm (blessing hand) */}
+                    <path
+                      d="M 345 250 C 315 270, 305 290, 305 320"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+                    <path
+                      d="M 305 320 C 300 325, 302 335, 305 340 C 308 335, 310 325, 305 320 Z"
+                      fill="rgba(251, 191, 36, 0.4)"
+                      stroke="url(#goldGrad)"
+                      strokeWidth="1.2"
+                    />
+                  </g>
+                </g>
+
+                {/* Tilted Kalasha (Golden Pot of Amrita) */}
+                <g transform="translate(480, 175) rotate(55)" opacity="0.85">
+                  {/* Mango Leaves inside Rim */}
+                  <path d="M -15 -30 C -25 -50, -15 -60, -8 -35 Z" fill="#10B981" stroke="#047857" strokeWidth="1" />
+                  <path d="M 15 -30 C 25 -50, 15 -60, 8 -35 Z" fill="#10B981" stroke="#047857" strokeWidth="1" />
+                  <path d="M 0 -32 C 0 -58, 5 -55, 0 -32 Z" fill="#059669" stroke="#047857" strokeWidth="1" />
+
+                  {/* Kalasha Body */}
+                  <path
+                    d="M -25 -10 C -25 15, -40 30, -35 50 C -30 70, -15 80, 0 80 C 15 80, 30 70, 35 50 C 40 30, 25 15, 25 -10 C 25 -20, 15 -25, 20 -32 L -20 -32 C -15 -25, -25 -20, -25 -10 Z"
+                    fill="url(#goldGrad)"
+                    stroke="#D97706"
+                    strokeWidth="2.5"
+                    filter="url(#goldGlow)"
+                  />
+                  {/* Decorative bands on pot */}
+                  <path d="M -26 15 C 0 25, 0 25, 26 15" stroke="#FFF" strokeWidth="1.2" fill="none" opacity="0.4" />
+                  <path d="M -33 35 C 0 45, 0 45, 33 35" stroke="#D97706" strokeWidth="1.8" fill="none" opacity="0.8" />
+                  
+                  {/* Rim of the pot */}
+                  <ellipse cx="0" cy="-32" rx="20" ry="4" fill="#FBBF24" stroke="#D97706" strokeWidth="1.5" />
                 </g>
 
                 {/* Meditating Body Silhouette */}
                 <g strokeWidth="2.5" fill="none">
                   {/* Left Side Silhouette */}
                   <motion.path
-                    d="M 380 190 C 350 190, 340 240, 340 270 C 340 290, 350 310, 350 320 C 310 330, 290 350, 285 390 C 280 430, 310 460, 310 520 C 310 560, 250 600, 240 630 C 230 660, 260 670, 300 670 C 340 670, 360 650, 380 650"
+                    d="M 400 360 C 377.5 360, 370 397.5, 370 420 C 370 435, 377.5 450, 377.5 457.5 C 347.5 465, 332.5 480, 328.75 510 C 325 540, 347.5 562.5, 347.5 607.5 C 347.5 637.5, 302.5 667.5, 295 690 C 287.5 712.5, 310 720, 340 720 C 340 720, 385 705, 400 705"
                     stroke="rgba(13, 148, 136, 0.35)"
                     animate={{ strokeWidth: [2.5, 3.5, 2.5] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                   />
                   {/* Right Side Silhouette */}
                   <motion.path
-                    d="M 380 190 C 410 190, 420 240, 420 270 C 420 290, 410 310, 410 320 C 450 330, 470 350, 475 390 C 480 430, 450 460, 450 520 C 450 560, 510 600, 520 630 C 530 660, 500 670, 460 670 C 420 670, 400 650, 380 650"
+                    d="M 400 360 C 422.5 360, 430 397.5, 430 420 C 430 435, 422.5 450, 422.5 457.5 C 452.5 465, 467.5 480, 471.25 510 C 475 540, 452.5 562.5, 452.5 607.5 C 452.5 637.5, 497.5 667.5, 505 690 C 512.5 712.5, 490 720, 460 720 C 460 720, 415 705, 400 705"
                     stroke="rgba(13, 148, 136, 0.35)"
                     animate={{ strokeWidth: [2.5, 3.5, 2.5] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -137,10 +309,10 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
 
                 {/* Central Spine Nadi (Sushumna) */}
                 <line
-                  x1="380"
-                  y1="220"
-                  x2="380"
-                  y2="640"
+                  x1="400"
+                  y1="380"
+                  x2="400"
+                  y2="705"
                   stroke="url(#spineGlow)"
                   strokeWidth="4"
                   strokeLinecap="round"
@@ -149,7 +321,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
 
                 {/* Ida Nadi (Cooling Channel, Left Wave First) */}
                 <motion.path
-                  d="M 380 640 C 330 620, 330 590, 380 570 C 430 550, 430 520, 380 500 C 330 480, 330 450, 380 430 C 430 410, 430 380, 380 360 C 330 340, 330 310, 380 290 C 430 270, 430 240, 380 220"
+                  d="M 400 705 C 350 690, 350 665, 400 650 C 450 635, 450 610, 400 595 C 350 580, 350 555, 400 540 C 450 525, 450 500, 400 485 C 350 470, 350 445, 400 430 C 450 415, 450 395, 400 380"
                   fill="none"
                   stroke="url(#idaGlow)"
                   strokeWidth="3"
@@ -161,7 +333,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
 
                 {/* Pingala Nadi (Heating Channel, Right Wave First) */}
                 <motion.path
-                  d="M 380 640 C 430 620, 430 590, 380 570 C 330 550, 330 520, 380 500 C 430 480, 430 450, 380 430 C 330 410, 330 380, 380 360 C 430 340, 430 310, 380 290 C 330 270, 330 240, 380 220"
+                  d="M 400 705 C 450 690, 450 665, 400 650 C 350 635, 350 610, 400 595 C 450 580, 450 555, 400 540 C 350 525, 350 500, 400 485 C 450 470, 450 445, 400 430 C 350 415, 350 395, 400 380"
                   fill="none"
                   stroke="url(#pingalaGlow)"
                   strokeWidth="3"
@@ -175,26 +347,26 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                 {/* Heart Chakra Rings */}
                 <g opacity="0.4">
                   <motion.circle
-                    cx={380}
-                    cy={430}
+                    cx={400}
+                    cy={540}
                     r={45}
                     fill="none"
                     stroke="rgba(16, 185, 129, 0.75)"
                     strokeWidth="1.8"
                     strokeDasharray="8, 4"
-                    style={{ transformOrigin: "380px 430px" }}
+                    style={{ transformOrigin: "400px 540px" }}
                     animate={{ rotate: 360 }}
                     transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
                   />
                   <motion.circle
-                    cx={380}
-                    cy={430}
+                    cx={400}
+                    cy={540}
                     r={32}
                     fill="none"
                     stroke="rgba(16, 185, 129, 0.55)"
                     strokeWidth="1.8"
                     strokeDasharray="4, 6"
-                    style={{ transformOrigin: "380px 430px" }}
+                    style={{ transformOrigin: "400px 540px" }}
                     animate={{ rotate: -360 }}
                     transition={{ duration: 16, repeat: Infinity, ease: "linear" }}
                   />
@@ -203,26 +375,26 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                 {/* Crown Chakra Rings */}
                 <g opacity="0.4">
                   <motion.circle
-                    cx={380}
-                    cy={220}
+                    cx={400}
+                    cy={380}
                     r={42}
                     fill="none"
                     stroke="rgba(168, 85, 247, 0.75)"
                     strokeWidth="1.8"
                     strokeDasharray="7, 3"
-                    style={{ transformOrigin: "380px 220px" }}
+                    style={{ transformOrigin: "400px 380px" }}
                     animate={{ rotate: -360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                   />
                   <motion.circle
-                    cx={380}
-                    cy={220}
+                    cx={400}
+                    cy={380}
                     r={26}
                     fill="none"
                     stroke="rgba(168, 85, 247, 0.55)"
                     strokeWidth="1.8"
                     strokeDasharray="3, 4"
-                    style={{ transformOrigin: "380px 220px" }}
+                    style={{ transformOrigin: "400px 380px" }}
                     animate={{ rotate: 360 }}
                     transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
                   />
@@ -230,18 +402,18 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
 
                 {/* Chakras */}
                 {[
-                  { name: "Crown", y: 220, color: "#C084FC" },
-                  { name: "Third Eye", y: 290, color: "#60A5FA" },
-                  { name: "Throat", y: 360, color: "#22D3EE" },
-                  { name: "Heart", y: 430, color: "#34D399" },
-                  { name: "Solar Plexus", y: 500, color: "#FBBF24" },
-                  { name: "Sacral", y: 570, color: "#FB923C" },
-                  { name: "Root", y: 640, color: "#EF4444" }
+                  { name: "Crown", y: 380, color: "#C084FC" },
+                  { name: "Third Eye", y: 430, color: "#60A5FA" },
+                  { name: "Throat", y: 485, color: "#22D3EE" },
+                  { name: "Heart", y: 540, color: "#34D399" },
+                  { name: "Solar Plexus", y: 595, color: "#FBBF24" },
+                  { name: "Sacral", y: 650, color: "#FB923C" },
+                  { name: "Root", y: 705, color: "#EF4444" }
                 ].map((chakra, idx) => (
                   <g key={`chakra-${chakra.name}`}>
                     {/* Outer pulsing energy field */}
                     <motion.circle
-                      cx={380}
+                      cx={400}
                       cy={chakra.y}
                       r={24}
                       fill={chakra.color}
@@ -259,7 +431,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                     />
                     {/* Core solid energy node */}
                     <circle
-                      cx={380}
+                      cx={400}
                       cy={chakra.y}
                       r={7.5}
                       fill={chakra.color}
@@ -274,8 +446,8 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                 {[...Array(12)].map((_, i) => {
                   const size = 2.5 + (i % 2) * 1.5;
                   const delay = i * 1.5;
-                  const startX = 365 + (i * 7) % 30;
-                  const startY = 630 - (i * 35) % 380;
+                  const startX = 385 + (i * 7) % 30;
+                  const startY = 700 - (i * 30) % 350;
                   
                   return (
                     <motion.circle
@@ -300,155 +472,12 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                   );
                 })}
 
-                {/* Lord/Goddess Dhanvantari Silhouette & Divine Aura */}
+                {/* The Flowing Elixir (Amrita Streams) */}
                 <g>
-                  {/* Outer Golden Aura */}
-                  <motion.circle
-                    cx={140}
-                    cy={60}
-                    r={95}
-                    fill="url(#haloGrad)"
-                    animate={{ opacity: [0.6, 0.9, 0.6], scale: [0.95, 1.05, 0.95] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  />
-                  {/* Glowing Halo Rings */}
-                  <motion.circle
-                    cx={140}
-                    cy={60}
-                    r={70}
-                    fill="none"
-                    stroke="rgba(245, 158, 11, 0.45)"
-                    strokeWidth="1.2"
-                    strokeDasharray="4, 6"
-                    style={{ transformOrigin: "140px 60px" }}
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                  />
-                  
-                  {/* Goddess Dhanvantari Form Silhouette with solid/semi-transparent golden fills for visibility */}
-                  <g filter="url(#goldGlow)" opacity="0.85">
-                    {/* Crown (Kireeta) - Solid gold */}
-                    <path
-                      d="M 132 38 L 140 12 L 148 38 L 143 35 L 140 42 L 137 35 Z"
-                      fill="url(#goldGrad)"
-                      stroke="#D97706"
-                      strokeWidth="1.2"
-                    />
-                    {/* Head / Face Profile */}
-                    <path
-                      d="M 133 38 Q 128 52 140 52 Q 152 52 147 38 Z"
-                      fill="rgba(251, 191, 36, 0.35)"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                    />
-                    {/* Hair / Kundala (earrings) */}
-                    <circle cx="129" cy="48" r="3" fill="#F59E0B" stroke="#D97706" strokeWidth="0.8" />
-                    <circle cx="151" cy="48" r="3" fill="#F59E0B" stroke="#D97706" strokeWidth="0.8" />
-                    
-                    {/* Neck */}
-                    <path
-                      d="M 136 52 L 136 65 L 144 65 L 144 52 Z"
-                      fill="rgba(251, 191, 36, 0.25)"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.2"
-                    />
-                    
-                    {/* Torso & Shoulders */}
-                    <path
-                      d="M 105 85 C 115 65, 165 65, 175 85 L 165 125 C 160 140, 120 140, 115 125 Z"
-                      fill="rgba(251, 191, 36, 0.2)"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                    />
-
-                    {/* Upper Right Hand (holding rotating Chakra) */}
-                    <path
-                      d="M 165 80 C 185 75, 205 65, 205 50"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      fill="none"
-                    />
-                    <motion.circle
-                      cx="205"
-                      cy="45"
-                      r="8"
-                      stroke="#FBBF24"
-                      strokeWidth="2"
-                      strokeDasharray="4,2"
-                      fill="rgba(251, 191, 36, 0.35)"
-                      style={{ transformOrigin: "205px 45px" }}
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                    />
-                    
-                    {/* Upper Left Hand (holding Herb Leaf) */}
-                    <path
-                      d="M 115 80 C 95 75, 75 65, 75 50"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      fill="none"
-                    />
-                    <path
-                      d="M 75 50 C 70 42, 80 38, 75 50 Z"
-                      fill="#10B981"
-                      stroke="#047857"
-                      strokeWidth="1.8"
-                    />
-
-                    {/* Lower Left Arm (holding Kalasha base) */}
-                    <path
-                      d="M 112 105 C 95 110, 80 115, 65 115"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.8"
-                      strokeLinecap="round"
-                      fill="none"
-                    />
-                    <circle cx="65" cy="115" r="3" fill="#FBBF24" stroke="url(#goldGrad)" strokeWidth="1" />
-                    
-                    {/* Lower Right Arm (pouring Kalasha neck) */}
-                    <path
-                      d="M 160 105 C 140 115, 120 125, 100 118"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.8"
-                      strokeLinecap="round"
-                      fill="none"
-                    />
-                    <circle cx="100" cy="118" r="3" fill="#FBBF24" stroke="url(#goldGrad)" strokeWidth="1" />
-                  </g>
-                </g>
-
-                {/* Tilted Kalasha (Golden Pot of Amrita) */}
-                <g transform="translate(100, 110) rotate(55)" opacity="0.55">
-                  {/* Mango Leaves inside Rim */}
-                  <path d="M -15 -30 C -25 -50, -15 -60, -8 -35 Z" fill="#10B981" stroke="#047857" strokeWidth="1" />
-                  <path d="M 15 -30 C 25 -50, 15 -60, 8 -35 Z" fill="#10B981" stroke="#047857" strokeWidth="1" />
-                  <path d="M 0 -32 C 0 -58, 5 -55, 0 -32 Z" fill="#059669" stroke="#047857" strokeWidth="1" />
-
-                  {/* Kalasha Body */}
-                  <path
-                    d="M -25 -10 C -25 15, -40 30, -35 50 C -30 70, -15 80, 0 80 C 15 80, 30 70, 35 50 C 40 30, 25 15, 25 -10 C 25 -20, 15 -25, 20 -32 L -20 -32 C -15 -25, -25 -20, -25 -10 Z"
-                    fill="url(#goldGrad)"
-                    stroke="#D97706"
-                    strokeWidth="2.5"
-                    filter="url(#goldGlow)"
-                  />
-                  {/* Decorative bands on pot */}
-                  <path d="M -26 15 C 0 25, 0 25, 26 15" stroke="#FFF" strokeWidth="1.2" fill="none" opacity="0.4" />
-                  <path d="M -33 35 C 0 45, 0 45, 33 35" stroke="#D97706" strokeWidth="1.8" fill="none" opacity="0.8" />
-                  
-                  {/* Rim of the pot */}
-                  <ellipse cx="0" cy="-32" rx="20" ry="4" fill="#FBBF24" stroke="#D97706" strokeWidth="1.5" />
-                </g>
-
-                {/* The Flowing Elixir (Amrita Stream) */}
-                <g>
+                  {/* --- STREAM 1: Pot to Crown --- */}
                   {/* Outer glowing stream */}
                   <motion.path
-                    d="M 125 95 C 220 85, 300 120, 380 220"
+                    d="M 506 157 C 500 240, 440 300, 400 360"
                     stroke="rgba(16, 185, 129, 0.25)"
                     strokeWidth="9"
                     strokeLinecap="round"
@@ -457,7 +486,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                   />
                   {/* Middle flowing stream */}
                   <motion.path
-                    d="M 125 95 C 220 85, 300 120, 380 220"
+                    d="M 506 157 C 500 240, 440 300, 400 360"
                     stroke="url(#elixirGrad)"
                     strokeWidth="4.5"
                     strokeLinecap="round"
@@ -469,21 +498,56 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                   />
                   {/* Core white light stream */}
                   <motion.path
-                    d="M 125 95 C 220 85, 300 120, 380 220"
+                    d="M 506 157 C 500 240, 440 300, 400 360"
                     stroke="#FFFFFF"
                     strokeWidth="1.8"
                     strokeLinecap="round"
                     fill="none"
                     strokeDasharray="15 30"
-                    opacity="0.5"
+                    opacity="0.6"
                     animate={{ strokeDashoffset: [0, -90] }}
                     transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
                   />
 
-                  {/* Flowing Droplets along the path */}
+                  {/* --- STREAM 2: Pot Cascade Down Side --- */}
+                  {/* Outer glowing stream */}
+                  <motion.path
+                    d="M 506 157 C 530 250, 560 450, 550 720"
+                    stroke="rgba(16, 185, 129, 0.2)"
+                    strokeWidth="7"
+                    strokeLinecap="round"
+                    fill="none"
+                    filter="url(#elixirGlow)"
+                  />
+                  {/* Middle flowing stream */}
+                  <motion.path
+                    d="M 506 157 C 530 250, 560 450, 550 720"
+                    stroke="url(#elixirGrad)"
+                    strokeWidth="3.5"
+                    strokeLinecap="round"
+                    fill="none"
+                    strokeDasharray="25 15"
+                    opacity="0.4"
+                    animate={{ strokeDashoffset: [0, -80] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                  />
+                  {/* Core white light stream */}
+                  <motion.path
+                    d="M 506 157 C 530 250, 560 450, 550 720"
+                    stroke="#FFFFFF"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    fill="none"
+                    strokeDasharray="12 25"
+                    opacity="0.5"
+                    animate={{ strokeDashoffset: [0, -80] }}
+                    transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+                  />
+
+                  {/* Flowing Droplets along main path */}
                   <circle r="4" fill="#FFFFFF" opacity="0.55" filter="url(#elixirGlow)">
                     <animateMotion
-                      path="M 125 95 C 220 85, 300 120, 380 220"
+                      path="M 506 157 C 500 240, 440 300, 400 360"
                       dur="3s"
                       repeatCount="indefinite"
                       begin="0s"
@@ -491,18 +555,18 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                   </circle>
                   <circle r="3" fill="#FBBF24" opacity="0.55" filter="url(#elixirGlow)">
                     <animateMotion
-                      path="M 125 95 C 220 85, 300 120, 380 220"
+                      path="M 506 157 C 500 240, 440 300, 400 360"
                       dur="3s"
                       repeatCount="indefinite"
-                      begin="1s"
+                      begin="1.2s"
                     />
                   </circle>
                   <circle r="3.5" fill="#34D399" opacity="0.55" filter="url(#elixirGlow)">
                     <animateMotion
-                      path="M 125 95 C 220 85, 300 120, 380 220"
+                      path="M 506 157 C 500 240, 440 300, 400 360"
                       dur="3s"
                       repeatCount="indefinite"
-                      begin="2s"
+                      begin="2.2s"
                     />
                   </circle>
                 </g>
