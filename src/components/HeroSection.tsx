@@ -43,7 +43,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
           
           {/* Left Text Narrative */}
           <div className="lg:col-span-6 space-y-8 text-left relative min-h-[500px] flex flex-col justify-center">
-            {/* Live Tree of Life & Meditating Chakra Energy Body Animation - placed behind text, away from right image */}
+            {/* Live Goddess Dhanvantari Elixir of Life Background Animation - placed behind text, away from right image */}
             <div className="absolute inset-0 lg:-left-24 lg:-right-24 xl:-left-32 xl:-right-32 -z-10 pointer-events-none flex items-center justify-center overflow-visible">
               <svg
                 width="100%"
@@ -55,22 +55,33 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
               >
                 <defs>
                   <linearGradient id="spineGlow" x1="0" y1="1" x2="0" y2="0">
-                    <stop offset="0%" stopColor="#FECACA" stopOpacity="1.0" />
-                    <stop offset="16%" stopColor="#FED7AA" stopOpacity="1.0" />
-                    <stop offset="33%" stopColor="#FDE68A" stopOpacity="1.0" />
+                    <stop offset="0%" stopColor="#EF4444" stopOpacity="1.0" />
+                    <stop offset="16%" stopColor="#FB923C" stopOpacity="1.0" />
+                    <stop offset="33%" stopColor="#FBBF24" stopOpacity="1.0" />
                     <stop offset="50%" stopColor="#34D399" stopOpacity="1.0" />
-                    <stop offset="66%" stopColor="#67E8F9" stopOpacity="1.0" />
-                    <stop offset="83%" stopColor="#9333EA" stopOpacity="1.0" />
+                    <stop offset="66%" stopColor="#22D3EE" stopOpacity="1.0" />
+                    <stop offset="83%" stopColor="#60A5FA" stopOpacity="1.0" />
                     <stop offset="100%" stopColor="#C084FC" stopOpacity="1.0" />
                   </linearGradient>
-                  <linearGradient id="rootGlow" x1="0.5" y1="0" x2="0.5" y2="1">
-                    <stop offset="0%" stopColor="#10B981" stopOpacity="0.95" />
-                    <stop offset="100%" stopColor="#047857" stopOpacity="0.3" />
+                  <linearGradient id="lotusGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#10B981" stopOpacity="0.8" />
+                    <stop offset="50%" stopColor="#059669" stopOpacity="0.5" />
+                    <stop offset="100%" stopColor="#064E3B" stopOpacity="0.2" />
                   </linearGradient>
-                  <linearGradient id="branchGlow" x1="0.5" y1="1" x2="0.5" y2="0">
-                    <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.95" />
-                    <stop offset="100%" stopColor="#4F46E5" stopOpacity="0.3" />
+                  <linearGradient id="elixirGrad" x1="1" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#F59E0B" stopOpacity="1" />
+                    <stop offset="50%" stopColor="#10B981" stopOpacity="0.8" />
+                    <stop offset="100%" stopColor="#FFFFFF" stopOpacity="1" />
                   </linearGradient>
+                  <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#FBBF24" />
+                    <stop offset="50%" stopColor="#F59E0B" />
+                    <stop offset="100%" stopColor="#D97706" />
+                  </linearGradient>
+                  <radialGradient id="haloGrad" cx="0.5" cy="0.5" r="0.5">
+                    <stop offset="0%" stopColor="#FBBF24" stopOpacity="0.2" />
+                    <stop offset="100%" stopColor="#FBBF24" stopOpacity="0" />
+                  </radialGradient>
                   <linearGradient id="idaGlow" x1="0" y1="0" x2="1" y2="1">
                     <stop offset="0%" stopColor="#06B6D4" stopOpacity="0.95" />
                     <stop offset="100%" stopColor="#1D4ED8" stopOpacity="0.4" />
@@ -79,94 +90,44 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                     <stop offset="0%" stopColor="#F97316" stopOpacity="0.95" />
                     <stop offset="100%" stopColor="#DC2626" stopOpacity="0.4" />
                   </linearGradient>
+                  <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="6" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                  <filter id="elixirGlow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="4" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
                 </defs>
 
-                {/* Tree of Life Roots */}
-                <g strokeWidth="2.2" strokeLinecap="round">
-                  {/* Central root */}
-                  <motion.path 
-                    d="M 400 580 Q 400 640 400 700 T 400 760" 
-                    stroke="url(#rootGlow)"
-                    animate={{ strokeWidth: [2.2, 3.5, 2.2], opacity: [0.85, 1, 0.85] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  />
-                  <path d="M 400 640 Q 385 680 375 720" stroke="url(#rootGlow)" strokeWidth="1.8" />
-                  <path d="M 400 670 Q 415 710 425 740" stroke="url(#rootGlow)" strokeWidth="1.8" />
-
-                  {/* Left root 1 */}
-                  <motion.path 
-                    d="M 400 580 Q 370 630 330 670 T 260 710" 
-                    stroke="url(#rootGlow)"
-                    animate={{ strokeWidth: [1.8, 2.6, 1.8] }}
-                    transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  />
-                  <path d="M 350 650 Q 320 690 280 710" stroke="url(#rootGlow)" strokeWidth="1.8" />
-
-                  {/* Left root 2 */}
-                  <path d="M 400 580 Q 340 600 280 620 T 180 630" stroke="url(#rootGlow)" strokeWidth="1.8" />
-
-                  {/* Right root 1 */}
-                  <motion.path 
-                    d="M 400 580 Q 430 630 470 670 T 540 710" 
-                    stroke="url(#rootGlow)"
-                    animate={{ strokeWidth: [1.8, 2.6, 1.8] }}
-                    transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  />
-                  <path d="M 450 650 Q 480 690 520 710" stroke="url(#rootGlow)" strokeWidth="1.8" />
-
-                  {/* Right root 2 */}
-                  <path d="M 400 580 Q 460 600 520 620 T 620 630" stroke="url(#rootGlow)" strokeWidth="1.8" />
-                </g>
-
-                {/* Tree of Life Branches */}
-                <g strokeWidth="2.2" strokeLinecap="round">
-                  {/* Central branch */}
-                  <motion.path 
-                    d="M 400 160 Q 400 110 400 60 T 400 10" 
-                    stroke="url(#branchGlow)"
-                    animate={{ strokeWidth: [2.2, 3.5, 2.2], opacity: [0.9, 1, 0.9] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  />
-                  <path d="M 400 110 Q 385 80 370 50" stroke="url(#branchGlow)" strokeWidth="1.8" />
-                  <path d="M 400 80 Q 415 50 430 20" stroke="url(#branchGlow)" strokeWidth="1.8" />
-
-                  {/* Left branch 1 */}
-                  <motion.path 
-                    d="M 400 160 Q 360 120 310 90 T 230 65" 
-                    stroke="url(#branchGlow)"
-                    animate={{ strokeWidth: [1.8, 2.6, 1.8] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-                  />
-                  <path d="M 335 105 Q 300 80 260 65" stroke="url(#branchGlow)" strokeWidth="1.8" />
-
-                  {/* Left branch 2 */}
-                  <path d="M 400 160 Q 330 140 260 120 T 160 100" stroke="url(#branchGlow)" strokeWidth="1.8" />
-
-                  {/* Right branch 1 */}
-                  <motion.path 
-                    d="M 400 160 Q 440 120 490 90 T 570 65" 
-                    stroke="url(#branchGlow)"
-                    animate={{ strokeWidth: [1.8, 2.6, 1.8] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
-                  />
-                  <path d="M 465 105 Q 500 80 540 65" stroke="url(#branchGlow)" strokeWidth="1.8" />
-
-                  {/* Right branch 2 */}
-                  <path d="M 400 160 Q 470 140 540 120 T 640 100" stroke="url(#branchGlow)" strokeWidth="1.8" />
+                {/* Lotus Flower Base */}
+                <g opacity="0.9" strokeWidth="2" strokeLinecap="round">
+                  {/* Back/Outer Petals */}
+                  <path d="M 350 670 C 270 680, 240 640, 230 610 C 260 620, 310 650, 350 670 Z" fill="url(#lotusGrad)" stroke="#10B981" />
+                  <path d="M 350 670 C 430 680, 460 640, 470 610 C 440 620, 390 650, 350 670 Z" fill="url(#lotusGrad)" stroke="#10B981" />
+                  
+                  {/* Mid Petals */}
+                  <path d="M 350 670 C 290 680, 270 630, 280 595 C 300 615, 330 645, 350 670 Z" fill="url(#lotusGrad)" stroke="#34D399" />
+                  <path d="M 350 670 C 410 680, 430 630, 420 595 C 400 615, 370 645, 350 670 Z" fill="url(#lotusGrad)" stroke="#34D399" />
+                  
+                  {/* Front/Center Petals */}
+                  <path d="M 350 670 C 320 675, 305 635, 320 590 C 330 615, 340 645, 350 670 Z" fill="url(#lotusGrad)" stroke="#6EE7B7" />
+                  <path d="M 350 670 C 380 675, 395 635, 380 590 C 370 615, 360 645, 350 670 Z" fill="url(#lotusGrad)" stroke="#6EE7B7" />
+                  <path d="M 350 670 C 335 660, 335 600, 350 575 C 365 600, 365 660, 350 670 Z" fill="url(#lotusGrad)" stroke="#FBBF24" strokeWidth="2.5" />
                 </g>
 
                 {/* Meditating Body Silhouette */}
                 <g strokeWidth="3.2" fill="none">
                   {/* Left Side Silhouette */}
                   <motion.path
-                    d="M 400 130 C 370 130, 360 180, 360 210 C 360 230, 370 250, 370 260 C 330 270, 310 290, 305 330 C 300 370, 330 400, 330 460 C 330 500, 270 540, 260 570 C 250 600, 280 610, 320 610 C 360 610, 380 590, 400 590"
+                    d="M 350 190 C 320 190, 310 240, 310 270 C 310 290, 320 310, 320 320 C 280 330, 260 350, 255 390 C 250 430, 280 460, 280 520 C 280 560, 220 600, 210 630 C 200 660, 230 670, 270 670 C 310 670, 330 650, 350 650"
                     stroke="rgba(13, 148, 136, 0.65)"
                     animate={{ strokeWidth: [3, 4.2, 3], stroke: ["rgba(13, 148, 136, 0.6)", "rgba(13, 148, 136, 0.85)", "rgba(13, 148, 136, 0.6)"] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                   />
                   {/* Right Side Silhouette */}
                   <motion.path
-                    d="M 400 130 C 430 130, 440 180, 440 210 C 440 230, 430 250, 430 260 C 470 270, 490 290, 495 330 C 500 370, 470 400, 470 460 C 470 500, 530 540, 540 570 C 550 600, 520 610, 480 610 C 440 610, 420 590, 400 590"
+                    d="M 350 190 C 380 190, 390 240, 390 270 C 390 290, 380 310, 380 320 C 420 330, 440 350, 445 390 C 450 430, 420 460, 420 520 C 420 560, 480 600, 490 630 C 500 660, 470 670, 430 670 C 390 670, 370 650, 350 650"
                     stroke="rgba(13, 148, 136, 0.65)"
                     animate={{ strokeWidth: [3, 4.2, 3], stroke: ["rgba(13, 148, 136, 0.6)", "rgba(13, 148, 136, 0.85)", "rgba(13, 148, 136, 0.6)"] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -175,10 +136,10 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
 
                 {/* Central Spine Nadi (Sushumna) */}
                 <line
-                  x1="400"
-                  y1="130"
-                  x2="400"
-                  y2="600"
+                  x1="350"
+                  y1="220"
+                  x2="350"
+                  y2="640"
                   stroke="url(#spineGlow)"
                   strokeWidth="4.5"
                   strokeLinecap="round"
@@ -186,7 +147,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
 
                 {/* Ida Nadi (Cooling Channel, Left Wave First) */}
                 <motion.path
-                  d="M 400 580 C 350 560, 350 530, 400 510 C 450 490, 450 460, 400 440 C 350 420, 350 390, 400 370 C 450 350, 450 320, 400 300 C 350 280, 350 250, 400 230 C 450 210, 450 180, 400 160"
+                  d="M 350 640 C 300 620, 300 590, 350 570 C 400 550, 400 520, 350 500 C 300 480, 300 450, 350 430 C 400 410, 400 380, 350 360 C 300 340, 300 310, 350 290 C 400 270, 400 240, 350 220"
                   fill="none"
                   stroke="url(#idaGlow)"
                   strokeWidth="3.8"
@@ -197,7 +158,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
 
                 {/* Pingala Nadi (Heating Channel, Right Wave First) */}
                 <motion.path
-                  d="M 400 580 C 450 560, 450 530, 400 510 C 350 490, 350 460, 400 440 C 450 420, 450 390, 400 370 C 350 350, 350 320, 400 300 C 450 280, 450 250, 400 230 C 350 210, 350 180, 400 160"
+                  d="M 350 640 C 400 620, 400 590, 350 570 C 300 550, 300 520, 350 500 C 400 480, 400 450, 350 430 C 300 410, 300 380, 350 360 C 400 340, 400 310, 350 290 C 300 270, 300 240, 350 220"
                   fill="none"
                   stroke="url(#pingalaGlow)"
                   strokeWidth="3.8"
@@ -210,26 +171,26 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                 {/* Heart Chakra Rings */}
                 <g>
                   <motion.circle
-                    cx={400}
-                    cy={370}
+                    cx={350}
+                    cy={430}
                     r={45}
                     fill="none"
                     stroke="rgba(16, 185, 129, 0.75)"
                     strokeWidth="1.8"
                     strokeDasharray="8, 4"
-                    style={{ transformOrigin: "400px 370px" }}
+                    style={{ transformOrigin: "350px 430px" }}
                     animate={{ rotate: 360 }}
                     transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
                   />
                   <motion.circle
-                    cx={400}
-                    cy={370}
+                    cx={350}
+                    cy={430}
                     r={32}
                     fill="none"
                     stroke="rgba(16, 185, 129, 0.55)"
                     strokeWidth="1.8"
                     strokeDasharray="4, 6"
-                    style={{ transformOrigin: "400px 370px" }}
+                    style={{ transformOrigin: "350px 430px" }}
                     animate={{ rotate: -360 }}
                     transition={{ duration: 16, repeat: Infinity, ease: "linear" }}
                   />
@@ -238,26 +199,26 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                 {/* Crown Chakra Rings */}
                 <g>
                   <motion.circle
-                    cx={400}
-                    cy={160}
+                    cx={350}
+                    cy={220}
                     r={42}
                     fill="none"
                     stroke="rgba(168, 85, 247, 0.75)"
                     strokeWidth="1.8"
                     strokeDasharray="7, 3"
-                    style={{ transformOrigin: "400px 160px" }}
+                    style={{ transformOrigin: "350px 220px" }}
                     animate={{ rotate: -360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                   />
                   <motion.circle
-                    cx={400}
-                    cy={160}
+                    cx={350}
+                    cy={220}
                     r={26}
                     fill="none"
                     stroke="rgba(168, 85, 247, 0.55)"
                     strokeWidth="1.8"
                     strokeDasharray="3, 4"
-                    style={{ transformOrigin: "400px 160px" }}
+                    style={{ transformOrigin: "350px 220px" }}
                     animate={{ rotate: 360 }}
                     transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
                   />
@@ -265,18 +226,18 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
 
                 {/* Chakras */}
                 {[
-                  { name: "Crown", y: 160, color: "#C084FC" },
-                  { name: "Third Eye", y: 230, color: "#60A5FA" },
-                  { name: "Throat", y: 300, color: "#22D3EE" },
-                  { name: "Heart", y: 370, color: "#34D399" }, // emerald green
-                  { name: "Solar Plexus", y: 440, color: "#FBBF24" }, // amber yellow
-                  { name: "Sacral", y: 510, color: "#FB923C" }, // orange
-                  { name: "Root", y: 580, color: "#EF4444" } // red
+                  { name: "Crown", y: 220, color: "#C084FC" },
+                  { name: "Third Eye", y: 290, color: "#60A5FA" },
+                  { name: "Throat", y: 360, color: "#22D3EE" },
+                  { name: "Heart", y: 430, color: "#34D399" },
+                  { name: "Solar Plexus", y: 500, color: "#FBBF24" },
+                  { name: "Sacral", y: 570, color: "#FB923C" },
+                  { name: "Root", y: 640, color: "#EF4444" }
                 ].map((chakra, idx) => (
                   <g key={`chakra-${chakra.name}`}>
                     {/* Outer pulsing energy field */}
                     <motion.circle
-                      cx={400}
+                      cx={350}
                       cy={chakra.y}
                       r={24}
                       fill={chakra.color}
@@ -294,7 +255,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                     />
                     {/* Core solid energy node */}
                     <circle
-                      cx={400}
+                      cx={350}
                       cy={chakra.y}
                       r={7.5}
                       fill={chakra.color}
@@ -306,10 +267,10 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
 
                 {/* Rising Prana Sparkles */}
                 {[...Array(12)].map((_, i) => {
-                  const size = 2.5 + (i % 2) * 1.5; // 2.5px to 4px
+                  const size = 2.5 + (i % 2) * 1.5;
                   const delay = i * 1.5;
-                  const startX = 385 + (i * 7) % 30; // clustered around the spine (x=385 to 415)
-                  const startY = 570 - (i * 35) % 380; // start at various heights
+                  const startX = 335 + (i * 7) % 30;
+                  const startY = 630 - (i * 35) % 380;
                   
                   return (
                     <motion.circle
@@ -317,7 +278,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                       cx={startX}
                       cy={startY}
                       r={size}
-                      fill="rgba(16, 185, 129, 0.95)" // brighter emerald prana
+                      fill="rgba(16, 185, 129, 0.95)"
                       initial={{ opacity: 0, y: 0 }}
                       animate={{
                         opacity: [0, 1.0, 1.0, 0],
@@ -333,6 +294,136 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                     />
                   );
                 })}
+
+                {/* Lord/Goddess Dhanvantari Silhouette & Divine Aura */}
+                <g>
+                  {/* Outer Golden Aura */}
+                  <motion.circle
+                    cx={600}
+                    cy={110}
+                    r={95}
+                    fill="url(#haloGrad)"
+                    animate={{ opacity: [0.6, 0.9, 0.6], scale: [0.95, 1.05, 0.95] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  {/* Glowing Halo Rings */}
+                  <motion.circle
+                    cx={600}
+                    cy={110}
+                    r={75}
+                    fill="none"
+                    stroke="rgba(245, 158, 11, 0.3)"
+                    strokeWidth="1.2"
+                    strokeDasharray="6, 8"
+                    style={{ transformOrigin: "600px 110px" }}
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                  />
+                  {/* Divine Arms Silhouette */}
+                  <path
+                    d="M 760 60 C 700 90, 660 120, 605 130"
+                    stroke="rgba(245, 158, 11, 0.75)"
+                    strokeWidth="2.8"
+                    strokeLinecap="round"
+                    fill="none"
+                  />
+                  <path
+                    d="M 720 30 C 670 55, 620 75, 570 95"
+                    stroke="rgba(245, 158, 11, 0.75)"
+                    strokeWidth="2.8"
+                    strokeLinecap="round"
+                    fill="none"
+                  />
+                  {/* Bracelets */}
+                  <circle cx="630" cy="118" r="5" stroke="#FBBF24" strokeWidth="1.5" fill="none" />
+                  <circle cx="625" cy="115" r="5" stroke="#FBBF24" strokeWidth="1.5" fill="none" />
+                  <circle cx="590" cy="85" r="5" stroke="#FBBF24" strokeWidth="1.5" fill="none" />
+                  <circle cx="585" cy="82" r="5" stroke="#FBBF24" strokeWidth="1.5" fill="none" />
+                </g>
+
+                {/* Tilted Kalasha (Golden Pot of Amrita) */}
+                <g transform="translate(600, 110) rotate(-55)">
+                  {/* Mango Leaves inside Rim */}
+                  <path d="M -15 -30 C -25 -50, -15 -60, -8 -35 Z" fill="#10B981" stroke="#047857" strokeWidth="1" />
+                  <path d="M 15 -30 C 25 -50, 15 -60, 8 -35 Z" fill="#10B981" stroke="#047857" strokeWidth="1" />
+                  <path d="M 0 -32 C 0 -58, 5 -55, 0 -32 Z" fill="#059669" stroke="#047857" strokeWidth="1" />
+
+                  {/* Kalasha Body */}
+                  <path
+                    d="M -25 -10 C -25 15, -40 30, -35 50 C -30 70, -15 80, 0 80 C 15 80, 30 70, 35 50 C 40 30, 25 15, 25 -10 C 25 -20, 15 -25, 20 -32 L -20 -32 C -15 -25, -25 -20, -25 -10 Z"
+                    fill="url(#goldGrad)"
+                    stroke="#D97706"
+                    strokeWidth="2.5"
+                    filter="url(#goldGlow)"
+                  />
+                  {/* Decorative bands on pot */}
+                  <path d="M -26 15 C 0 25, 0 25, 26 15" stroke="#FFF" strokeWidth="1.2" fill="none" opacity="0.4" />
+                  <path d="M -33 35 C 0 45, 0 45, 33 35" stroke="#D97706" strokeWidth="1.8" fill="none" opacity="0.8" />
+                  
+                  {/* Rim of the pot */}
+                  <ellipse cx="0" cy="-32" rx="20" ry="4" fill="#FBBF24" stroke="#D97706" strokeWidth="1.5" />
+                </g>
+
+                {/* The Flowing Elixir (Amrita Stream) */}
+                <g>
+                  {/* Outer glowing stream */}
+                  <motion.path
+                    d="M 575 95 C 480 85, 400 120, 350 220"
+                    stroke="rgba(16, 185, 129, 0.4)"
+                    strokeWidth="9"
+                    strokeLinecap="round"
+                    fill="none"
+                    filter="url(#elixirGlow)"
+                  />
+                  {/* Middle flowing stream */}
+                  <motion.path
+                    d="M 575 95 C 480 85, 400 120, 350 220"
+                    stroke="url(#elixirGrad)"
+                    strokeWidth="5"
+                    strokeLinecap="round"
+                    fill="none"
+                    strokeDasharray="30 15"
+                    animate={{ strokeDashoffset: [0, -90] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                  />
+                  {/* Core white light stream */}
+                  <motion.path
+                    d="M 575 95 C 480 85, 400 120, 350 220"
+                    stroke="#FFFFFF"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    fill="none"
+                    strokeDasharray="15 30"
+                    animate={{ strokeDashoffset: [0, -90] }}
+                    transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+                  />
+
+                  {/* Flowing Droplets along the path */}
+                  <circle r="4" fill="#FFFFFF" filter="url(#elixirGlow)">
+                    <animateMotion
+                      path="M 575 95 C 480 85, 400 120, 350 220"
+                      dur="3s"
+                      repeatCount="indefinite"
+                      begin="0s"
+                    />
+                  </circle>
+                  <circle r="3" fill="#FBBF24" filter="url(#elixirGlow)">
+                    <animateMotion
+                      path="M 575 95 C 480 85, 400 120, 350 220"
+                      dur="3s"
+                      repeatCount="indefinite"
+                      begin="1s"
+                    />
+                  </circle>
+                  <circle r="3.5" fill="#34D399" filter="url(#elixirGlow)">
+                    <animateMotion
+                      path="M 575 95 C 480 85, 400 120, 350 220"
+                      dur="3s"
+                      repeatCount="indefinite"
+                      begin="2s"
+                    />
+                  </circle>
+                </g>
               </svg>
             </div>
 
