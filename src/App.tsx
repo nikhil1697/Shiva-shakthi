@@ -15,6 +15,7 @@ import OfferingsSection from './components/OfferingsSection';
 import Clinicians from './components/Clinicians';
 import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
+import FloatingLeaves from './components/FloatingLeaves';
 
 const fadeInUpVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -68,6 +69,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-bg-azure flex flex-col font-sans text-navy-dark antialiased">
+      {/* Global floating leaves effect */}
+      <FloatingLeaves />
+
       {/* Navigation Header */}
       <Header
         onBookClick={handleBookAppointment}

@@ -129,164 +129,105 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                   <path d="M 400 720 C 385 710, 385 650, 400 625 C 415 650, 415 710, 400 720 Z" fill="url(#lotusGrad)" stroke="#FBBF24" strokeWidth="2.5" />
                 </g>
 
-                {/* Goddess Dhanvantari Silhouette & Divine Aura */}
-                <g>
-                  {/* Outer Golden Aura */}
-                  <motion.circle
-                    cx={400}
-                    cy={170}
-                    r={90}
-                    fill="url(#haloGrad)"
-                    animate={{ opacity: [0.6, 0.9, 0.6], scale: [0.95, 1.05, 0.95] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  />
-                  {/* Glowing Halo Rings */}
-                  <motion.circle
-                    cx={400}
-                    cy={170}
-                    r={70}
-                    fill="none"
-                    stroke="rgba(245, 158, 11, 0.45)"
-                    strokeWidth="1.2"
-                    strokeDasharray="4, 6"
-                    style={{ transformOrigin: "400px 170px" }}
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                  />
-                  
-                  {/* Goddess Dhanvantari Form Silhouette */}
-                  <g filter="url(#goldGlow)" opacity="0.95">
-                    {/* Crown (Kireeta) - Solid gold */}
-                    <path
-                      d="M 380 155 L 420 155 L 412 143 L 417 143 L 400 95 L 383 143 L 388 143 Z"
-                      fill="url(#goldGrad)"
-                      stroke="#D97706"
-                      strokeWidth="1.2"
-                    />
-                    {/* Head / Face Profile */}
-                    <path
-                      d="M 388 155 C 382 175, 385 190, 400 190 C 415 190, 418 175, 412 155 Z"
-                      fill="rgba(251, 191, 36, 0.35)"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                    />
-                    {/* Hair / Kundala (earrings) */}
-                    <circle cx="384" cy="182" r="3.5" fill="#F59E0B" stroke="#D97706" strokeWidth="0.8" />
-                    <circle cx="416" cy="182" r="3.5" fill="#F59E0B" stroke="#D97706" strokeWidth="0.8" />
-                    
-                    {/* Neck */}
-                    <path
-                      d="M 392 190 L 392 212 L 408 212 L 408 190 Z"
-                      fill="rgba(251, 191, 36, 0.25)"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.2"
-                    />
-                    
-                    {/* Torso & Shoulders */}
-                    <path
-                      d="M 345 235 C 360 215, 440 215, 455 235 L 435 340 C 415 365, 385 365, 365 340 Z"
-                      fill="rgba(251, 191, 36, 0.22)"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                    />
-                    {/* Sari drapery */}
-                    <path
-                      d="M 345 235 C 370 240, 410 280, 435 340 L 420 345 C 390 280, 360 250, 345 235 Z"
-                      fill="url(#sariGrad)"
-                      stroke="#16827D"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                    />
+                {/* Tree of Life Canopy & Roots */}
+                <g id="treeOfLife">
+                  {/* Roots at the base */}
+                  <path d="M 400 720 C 380 725, 340 730, 320 745" stroke="url(#goldGrad)" strokeWidth="6" strokeLinecap="round" opacity="0.3" />
+                  <path d="M 400 720 C 420 725, 460 730, 480 745" stroke="url(#goldGrad)" strokeWidth="6" strokeLinecap="round" opacity="0.3" />
+                  <path d="M 400 720 C 390 725, 370 735, 360 750" stroke="url(#goldGrad)" strokeWidth="4" strokeLinecap="round" opacity="0.3" />
+                  <path d="M 400 720 C 410 725, 430 735, 440 750" stroke="url(#goldGrad)" strokeWidth="4" strokeLinecap="round" opacity="0.3" />
 
-                    {/* Upper Right Arm (holding rotating Chakra) */}
-                    <path
-                      d="M 348 235 C 325 225, 315 210, 320 180"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      fill="none"
-                    />
-                    <g>
+                  {/* Main Trunk running behind the spine */}
+                  <path d="M 400 720 C 400 600, 400 480, 400 380" stroke="url(#goldGrad)" strokeWidth="9" strokeLinecap="round" opacity="0.35" />
+
+                  {/* Symmetrical Branches extending from above the head / crown chakra at y=380 */}
+                  {/* Major Left and Right branches */}
+                  <path d="M 400 380 C 370 340, 310 300, 260 300" stroke="url(#goldGrad)" strokeWidth="6.5" strokeLinecap="round" opacity="0.35" />
+                  <path d="M 400 380 C 430 340, 490 300, 540 300" stroke="url(#goldGrad)" strokeWidth="6.5" strokeLinecap="round" opacity="0.35" />
+
+                  {/* Middle Left and Right branches */}
+                  <path d="M 400 380 C 390 320, 360 260, 350 200" stroke="url(#goldGrad)" strokeWidth="5.5" strokeLinecap="round" opacity="0.35" />
+                  <path d="M 400 380 C 410 320, 440 260, 450 200" stroke="url(#goldGrad)" strokeWidth="5.5" strokeLinecap="round" opacity="0.35" />
+
+                  {/* Secondary branch splits - Left side */}
+                  <path d="M 330 310 C 300 270, 240 250, 180 260" stroke="url(#goldGrad)" strokeWidth="4.5" strokeLinecap="round" opacity="0.35" />
+                  <path d="M 270 300 C 250 250, 200 210, 150 210" stroke="url(#goldGrad)" strokeWidth="3.5" strokeLinecap="round" opacity="0.35" />
+                  <path d="M 240 280 C 230 230, 260 190, 290 170" stroke="url(#goldGrad)" strokeWidth="3" strokeLinecap="round" opacity="0.35" />
+                  
+                  {/* Secondary branch splits - Right side */}
+                  <path d="M 470 310 C 500 270, 560 250, 620 260" stroke="url(#goldGrad)" strokeWidth="4.5" strokeLinecap="round" opacity="0.35" />
+                  <path d="M 530 300 C 550 250, 600 210, 650 210" stroke="url(#goldGrad)" strokeWidth="3.5" strokeLinecap="round" opacity="0.35" />
+                  <path d="M 560 280 C 570 230, 540 190, 510 170" stroke="url(#goldGrad)" strokeWidth="3" strokeLinecap="round" opacity="0.35" />
+
+                  {/* Tertiary twigs - Top Center */}
+                  <path d="M 380 250 C 350 210, 350 170, 360 120" stroke="url(#goldGrad)" strokeWidth="3" strokeLinecap="round" opacity="0.35" />
+                  <path d="M 420 250 C 450 210, 450 170, 440 120" stroke="url(#goldGrad)" strokeWidth="3" strokeLinecap="round" opacity="0.35" />
+                  <path d="M 400 200 L 400 100" stroke="url(#goldGrad)" strokeWidth="2.5" strokeLinecap="round" opacity="0.35" />
+
+                  {/* Dynamic pulsing glowing leaves of the Tree of Life */}
+                  {[
+                    // Left major canopy
+                    { x: 150, y: 260, r: 8, color: "#10B981", delay: 0.1 },
+                    { x: 180, y: 260, r: 12, color: "#34D399", delay: 0.5 },
+                    { x: 200, y: 230, r: 10, color: "#FBBF24", delay: 0.9 },
+                    { x: 150, y: 210, r: 9, color: "#10B981", delay: 0.3 },
+                    { x: 230, y: 210, r: 11, color: "#6EE7B7", delay: 0.7 },
+                    { x: 260, y: 180, r: 7, color: "#FBBF24", delay: 1.1 },
+                    { x: 290, y: 170, r: 13, color: "#10B981", delay: 0.2 },
+                    { x: 250, y: 260, r: 8, color: "#34D399", delay: 0.6 },
+                    { x: 220, y: 280, r: 10, color: "#16827D", delay: 0.8 },
+
+                    // Right major canopy
+                    { x: 650, y: 210, r: 9, color: "#10B981", delay: 0.4 },
+                    { x: 620, y: 260, r: 12, color: "#34D399", delay: 0.8 },
+                    { x: 600, y: 230, r: 10, color: "#FBBF24", delay: 0.1 },
+                    { x: 570, y: 210, r: 11, color: "#6EE7B7", delay: 0.6 },
+                    { x: 540, y: 180, r: 7, color: "#FBBF24", delay: 1.2 },
+                    { x: 510, y: 170, r: 13, color: "#10B981", delay: 0.3 },
+                    { x: 550, y: 260, r: 8, color: "#34D399", delay: 0.7 },
+                    { x: 580, y: 280, r: 10, color: "#16827D", delay: 0.9 },
+                    { x: 650, y: 260, r: 8, color: "#10B981", delay: 0.2 },
+
+                    // Center top canopy
+                    { x: 400, y: 120, r: 11, color: "#34D399", delay: 0.5 },
+                    { x: 370, y: 150, r: 10, color: "#10B981", delay: 0.9 },
+                    { x: 430, y: 150, r: 10, color: "#10B981", delay: 0.2 },
+                    { x: 360, y: 120, r: 8, color: "#FBBF24", delay: 0.7 },
+                    { x: 440, y: 120, r: 8, color: "#FBBF24", delay: 1.1 },
+                    { x: 380, y: 90, r: 9, color: "#6EE7B7", delay: 0.3 },
+                    { x: 420, y: 90, r: 9, color: "#6EE7B7", delay: 0.8 },
+                    { x: 400, y: 70, r: 7, color: "#34D399", delay: 1.3 },
+                    
+                    // Mid canopy transitions
+                    { x: 310, y: 240, r: 12, color: "#10B981", delay: 0.4 },
+                    { x: 490, y: 240, r: 12, color: "#10B981", delay: 0.8 },
+                    { x: 330, y: 140, r: 9, color: "#34D399", delay: 0.6 },
+                    { x: 470, y: 140, r: 9, color: "#34D399", delay: 1.0 },
+                  ].map((leaf, idx) => (
+                    <g key={`tree-leaf-${idx}`}>
+                      {/* Pulsing Leaf Glow */}
                       <motion.circle
-                        cx="320"
-                        cy="165"
-                        r="14"
-                        stroke="#FBBF24"
-                        strokeWidth="2"
-                        strokeDasharray="6,3"
-                        fill="rgba(251, 191, 36, 0.35)"
-                        style={{ transformOrigin: "320px 165px" }}
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                        cx={leaf.x}
+                        cy={leaf.y}
+                        r={leaf.r * 1.6}
+                        fill={leaf.color}
+                        opacity="0.1"
+                        animate={{ scale: [1, 1.25, 1], opacity: [0.08, 0.16, 0.08] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: leaf.delay }}
                       />
-                      <circle cx="320" cy="165" r="3" fill="#D97706" />
+                      {/* Leaf Shape Path (curved organic almond) */}
+                      <motion.path
+                        d={`M ${leaf.x} ${leaf.y - leaf.r} C ${leaf.x + leaf.r} ${leaf.y - leaf.r / 2}, ${leaf.x + leaf.r} ${leaf.y + leaf.r}, ${leaf.x} ${leaf.y + leaf.r} C ${leaf.x - leaf.r} ${leaf.y + leaf.r}, ${leaf.x - leaf.r} ${leaf.y - leaf.r / 2}, ${leaf.x} ${leaf.y - leaf.r} Z`}
+                        fill={leaf.color}
+                        opacity="0.45"
+                        stroke="rgba(255, 255, 255, 0.25)"
+                        strokeWidth="0.8"
+                        style={{ transformOrigin: `${leaf.x}px ${leaf.y}px` }}
+                        animate={{ rotate: [0, 6, -6, 0], scale: [1, 1.05, 0.95, 1] }}
+                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: leaf.delay }}
+                      />
                     </g>
-                    
-                    {/* Upper Left Arm (holding Kalasha) */}
-                    <path
-                      d="M 450 235 C 475 225, 485 210, 480 180"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      fill="none"
-                    />
-                    
-                    {/* Lower Left Arm (holding medicine bowl) */}
-                    <path
-                      d="M 455 250 C 485 270, 495 290, 490 320"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      fill="none"
-                    />
-                    <path
-                      d="M 488 318 C 488 328, 502 328, 502 318 Z"
-                      fill="url(#goldGrad)"
-                      stroke="#D97706"
-                      strokeWidth="1.5"
-                    />
-                    <circle cx="495" cy="316" r="3.5" fill="#10B981" />
-
-                    {/* Lower Right Arm (blessing hand) */}
-                    <path
-                      d="M 345 250 C 315 270, 305 290, 305 320"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      fill="none"
-                    />
-                    <path
-                      d="M 305 320 C 300 325, 302 335, 305 340 C 308 335, 310 325, 305 320 Z"
-                      fill="rgba(251, 191, 36, 0.4)"
-                      stroke="url(#goldGrad)"
-                      strokeWidth="1.2"
-                    />
-                  </g>
-                </g>
-
-                {/* Tilted Kalasha (Golden Pot of Amrita) */}
-                <g transform="translate(480, 175) rotate(55)" opacity="0.85">
-                  {/* Mango Leaves inside Rim */}
-                  <path d="M -15 -30 C -25 -50, -15 -60, -8 -35 Z" fill="#10B981" stroke="#047857" strokeWidth="1" />
-                  <path d="M 15 -30 C 25 -50, 15 -60, 8 -35 Z" fill="#10B981" stroke="#047857" strokeWidth="1" />
-                  <path d="M 0 -32 C 0 -58, 5 -55, 0 -32 Z" fill="#059669" stroke="#047857" strokeWidth="1" />
-
-                  {/* Kalasha Body */}
-                  <path
-                    d="M -25 -10 C -25 15, -40 30, -35 50 C -30 70, -15 80, 0 80 C 15 80, 30 70, 35 50 C 40 30, 25 15, 25 -10 C 25 -20, 15 -25, 20 -32 L -20 -32 C -15 -25, -25 -20, -25 -10 Z"
-                    fill="url(#goldGrad)"
-                    stroke="#D97706"
-                    strokeWidth="2.5"
-                    filter="url(#goldGlow)"
-                  />
-                  {/* Decorative bands on pot */}
-                  <path d="M -26 15 C 0 25, 0 25, 26 15" stroke="#FFF" strokeWidth="1.2" fill="none" opacity="0.4" />
-                  <path d="M -33 35 C 0 45, 0 45, 33 35" stroke="#D97706" strokeWidth="1.8" fill="none" opacity="0.8" />
-                  
-                  {/* Rim of the pot */}
-                  <ellipse cx="0" cy="-32" rx="20" ry="4" fill="#FBBF24" stroke="#D97706" strokeWidth="1.5" />
+                  ))}
                 </g>
 
                 {/* Meditating Body Silhouette */}
@@ -472,104 +413,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                   );
                 })}
 
-                {/* The Flowing Elixir (Amrita Streams) */}
-                <g>
-                  {/* --- STREAM 1: Pot to Crown --- */}
-                  {/* Outer glowing stream */}
-                  <motion.path
-                    d="M 506 157 C 500 240, 440 300, 400 360"
-                    stroke="rgba(16, 185, 129, 0.25)"
-                    strokeWidth="9"
-                    strokeLinecap="round"
-                    fill="none"
-                    filter="url(#elixirGlow)"
-                  />
-                  {/* Middle flowing stream */}
-                  <motion.path
-                    d="M 506 157 C 500 240, 440 300, 400 360"
-                    stroke="url(#elixirGrad)"
-                    strokeWidth="4.5"
-                    strokeLinecap="round"
-                    fill="none"
-                    strokeDasharray="30 15"
-                    opacity="0.45"
-                    animate={{ strokeDashoffset: [0, -90] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                  />
-                  {/* Core white light stream */}
-                  <motion.path
-                    d="M 506 157 C 500 240, 440 300, 400 360"
-                    stroke="#FFFFFF"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    fill="none"
-                    strokeDasharray="15 30"
-                    opacity="0.6"
-                    animate={{ strokeDashoffset: [0, -90] }}
-                    transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
-                  />
 
-                  {/* --- STREAM 2: Pot Cascade Down Side --- */}
-                  {/* Outer glowing stream */}
-                  <motion.path
-                    d="M 506 157 C 530 250, 560 450, 550 720"
-                    stroke="rgba(16, 185, 129, 0.2)"
-                    strokeWidth="7"
-                    strokeLinecap="round"
-                    fill="none"
-                    filter="url(#elixirGlow)"
-                  />
-                  {/* Middle flowing stream */}
-                  <motion.path
-                    d="M 506 157 C 530 250, 560 450, 550 720"
-                    stroke="url(#elixirGrad)"
-                    strokeWidth="3.5"
-                    strokeLinecap="round"
-                    fill="none"
-                    strokeDasharray="25 15"
-                    opacity="0.4"
-                    animate={{ strokeDashoffset: [0, -80] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                  />
-                  {/* Core white light stream */}
-                  <motion.path
-                    d="M 506 157 C 530 250, 560 450, 550 720"
-                    stroke="#FFFFFF"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    fill="none"
-                    strokeDasharray="12 25"
-                    opacity="0.5"
-                    animate={{ strokeDashoffset: [0, -80] }}
-                    transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
-                  />
-
-                  {/* Flowing Droplets along main path */}
-                  <circle r="4" fill="#FFFFFF" opacity="0.55" filter="url(#elixirGlow)">
-                    <animateMotion
-                      path="M 506 157 C 500 240, 440 300, 400 360"
-                      dur="3s"
-                      repeatCount="indefinite"
-                      begin="0s"
-                    />
-                  </circle>
-                  <circle r="3" fill="#FBBF24" opacity="0.55" filter="url(#elixirGlow)">
-                    <animateMotion
-                      path="M 506 157 C 500 240, 440 300, 400 360"
-                      dur="3s"
-                      repeatCount="indefinite"
-                      begin="1.2s"
-                    />
-                  </circle>
-                  <circle r="3.5" fill="#34D399" opacity="0.55" filter="url(#elixirGlow)">
-                    <animateMotion
-                      path="M 506 157 C 500 240, 440 300, 400 360"
-                      dur="3s"
-                      repeatCount="indefinite"
-                      begin="2.2s"
-                    />
-                  </circle>
-                </g>
               </svg>
             </div>
 
