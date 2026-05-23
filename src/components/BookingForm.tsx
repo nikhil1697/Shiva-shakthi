@@ -27,7 +27,7 @@ const particles = Array.from({ length: 28 }).map((_, i) => {
   const x = Math.cos(rad) * distance;
   const y = Math.sin(rad) * distance;
   
-  const colors = ['#2FB7B1', '#F97316', '#10B981', '#3B82F6', '#F59E0B', '#8B5CF6', '#EC4899'];
+  const colors = ['#16827D', '#D8CEB8', '#203429', '#C24E38', '#28A5A0', '#9D3B24'];
   const color = colors[i % colors.length];
   const size = 6 + Math.random() * 8;
   const isCircle = Math.random() > 0.55;
@@ -180,14 +180,14 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
   };
 
   return (
-    <section id="booking" className="relative bg-bg-azure py-20 lg:py-28 overflow-hidden border-t border-gray-100">
+    <section id="booking" className="relative bg-bg-azure py-20 lg:py-28 overflow-hidden border-t border-bronze-light/20">
       {/* Background visual graphics */}
-      <div className="absolute top-1/2 left-10 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-[#1E9E98]/5 blur-3xl pointer-events-none"></div>
-
+      <div className="absolute top-1/2 left-10 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-turquoise-brand/5 blur-3xl pointer-events-none"></div>
+ 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main Double Block Structure */}
-        <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl bg-white border border-gray-100 shadow-[0_12px_40px_rgba(7,21,36,0.04)] grid grid-cols-1 md:grid-cols-12">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl bg-transparent border border-bronze-light/45 shadow-none grid grid-cols-1 md:grid-cols-12">
           
           {/* Left Column: Dark Block Narrative */}
           <div className="bg-navy-dark p-8 md:p-12 text-white md:col-span-5 flex flex-col justify-between text-left space-y-12 relative overflow-hidden">
@@ -212,36 +212,36 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
             <div className="space-y-6 relative z-10">
               
               <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-turquoise-brand">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-bronze-light">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-black tracking-widest text-[#2FB7B1] uppercase">Call coordinator</div>
+                  <div className="text-[10px] font-black tracking-widest text-bronze-light uppercase">Call coordinator</div>
                   <a href="tel:+919900012345" className="text-sm font-bold hover:text-turquoise-light transition-colors">
                     +91 99000 12345
                   </a>
                 </div>
               </div>
-
+ 
               <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-turquoise-brand">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-bronze-light">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-black tracking-widest text-[#2FB7B1] uppercase">Email coordinates</div>
+                  <div className="text-[10px] font-black tracking-widest text-bronze-light uppercase">Email coordinates</div>
                   <a href="mailto:care@shivashakthi.com" className="text-sm font-bold hover:text-turquoise-light transition-colors">
                     care@shivashakthi.com
                   </a>
                 </div>
               </div>
-
+ 
               <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-turquoise-brand">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-bronze-light">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-black tracking-widest text-[#2FB7B1] uppercase">SHIVA SHAKTHI HEALTH</div>
-                  <p className="text-xs text-gray-300 leading-relaxed font-medium">
+                  <div className="text-[10px] font-black tracking-widest text-bronze-light uppercase">SHIVA SHAKTHI HEALTH</div>
+                  <p className="text-xs text-white/80 leading-relaxed font-medium">
                     45, Precision Lane, Bangalore, India
                   </p>
                 </div>
@@ -262,7 +262,7 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
           </div>
 
           {/* Right Column: Form Container */}
-          <div className="p-8 md:p-12 md:col-span-7 flex flex-col justify-center relative bg-white">
+          <div className="p-8 md:p-12 md:col-span-7 flex flex-col justify-center relative bg-transparent border-t md:border-t-0 md:border-l border-bronze-light/30">
             
             <AnimatePresence mode="wait">
               {success ? (
@@ -327,21 +327,21 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                   </div>
 
                   {/* Captured data printout */}
-                  <div className="relative z-10 mx-auto max-w-xs rounded-2xl bg-bg-azure p-4 text-left border border-gray-100 text-xs text-gray-600 space-y-2.5 shadow-sm">
+                  <div className="relative z-10 mx-auto max-w-xs rounded-2xl bg-bg-azure p-4 text-left border border-bronze-light/30 text-xs text-navy-dark/80 space-y-2.5 shadow-none">
                     <div><strong>Full Name:</strong> {formData.fullName}</div>
                     <div><strong>Pre-assessment Contact:</strong> {formData.phone}</div>
                     <div><strong>Requested Slot:</strong> {new Date(formData.preferredDateTime).toLocaleString()}</div>
-                    <div className="flex items-center gap-1.5 text-turquoise-brand font-bold text-[9px] tracking-widest pt-2 border-t border-gray-200/80 uppercase">
+                    <div className="flex items-center gap-1.5 text-turquoise-brand font-bold text-[9px] tracking-widest pt-2 border-t border-bronze-light/20 uppercase">
                       <ShieldCheck className="h-4 w-4" /> Secure Protocol Standard
                     </div>
                   </div>
-
+ 
                   <div className="pt-2 relative z-10">
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={handleReset}
-                      className="rounded-full bg-orange-vitality px-8 py-3 text-xs font-black uppercase tracking-widest text-white shadow-md hover:bg-orange-600 transition cursor-pointer"
+                      className="rounded-full bg-orange-vitality px-8 py-3 text-xs font-black uppercase tracking-widest text-white shadow-md shadow-turquoise-brand/10 hover:bg-turquoise-light transition cursor-pointer"
                     >
                       SUBMIT NEW ENROLLMENT
                     </motion.button>
@@ -357,7 +357,7 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                   className="space-y-5 text-left"
                 >
                   {initialCenterName && (
-                    <div className="bg-[#E0F7F6] text-[#006A66] rounded-xl px-4 py-2.5 text-[11px] font-extrabold flex items-center gap-2 border border-[#006A66]/10">
+                    <div className="bg-turquoise-brand/10 text-turquoise-brand rounded-xl px-4 py-2.5 text-[11px] font-extrabold flex items-center gap-2 border border-turquoise-brand/20">
                       <ShieldCheck className="h-4 w-4 text-turquoise-brand" /> Requested Center: {initialCenterName}
                     </div>
                   )}
@@ -366,7 +366,7 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                     
                     {/* Full Name */}
                     <div className="space-y-1.5">
-                      <label className="text-[10px] font-black tracking-widest text-[#006A66] uppercase block">
+                      <label className="text-[10px] font-black tracking-widest text-turquoise-brand uppercase block">
                         FULL NAME
                       </label>
                       <input
@@ -375,14 +375,14 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                         value={formData.fullName}
                         onChange={handleInputChange}
                         placeholder="John Doe"
-                        className={`w-full rounded-xl border bg-white/40 backdrop-blur-xs px-4 py-2.5 text-sm text-navy-dark placeholder-gray-400 focus:border-turquoise-brand focus:bg-white focus:outline-none transition-all duration-300 ${errors.fullName ? 'border-red-500' : 'border-gray-200/80 focus:shadow-[0_0_12px_rgba(30,158,152,0.12)]'}`}
+                        className={`w-full rounded-xl border bg-bg-azure/20 px-4 py-2.5 text-sm text-navy-dark placeholder-navy-dark/40 focus:border-turquoise-brand focus:bg-transparent focus:outline-none transition-all duration-300 ${errors.fullName ? 'border-red-500' : 'border-bronze-light/50 focus:shadow-[0_0_10px_rgba(22,130,125,0.06)]'}`}
                       />
                       {errors.fullName && <p className="text-[10px] font-semibold text-red-500 flex items-center gap-1 mt-1"><AlertCircle className="h-3.5 w-3.5 shrink-0" /> {errors.fullName}</p>}
                     </div>
-
+ 
                     {/* Email Address */}
                     <div className="space-y-1.5">
-                      <label className="text-[10px] font-black tracking-widest text-[#006A66] uppercase block">
+                      <label className="text-[10px] font-black tracking-widest text-turquoise-brand uppercase block">
                         EMAIL ADDRESS
                       </label>
                       <input
@@ -391,22 +391,22 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="john@example.com"
-                        className={`w-full rounded-xl border bg-white/40 backdrop-blur-xs px-4 py-2.5 text-sm text-navy-dark placeholder-gray-400 focus:border-turquoise-brand focus:bg-white focus:outline-none transition-all duration-300 ${errors.email ? 'border-red-500' : 'border-gray-200/80 focus:shadow-[0_0_12px_rgba(30,158,152,0.12)]'}`}
+                        className={`w-full rounded-xl border bg-bg-azure/20 px-4 py-2.5 text-sm text-navy-dark placeholder-navy-dark/40 focus:border-turquoise-brand focus:bg-transparent focus:outline-none transition-all duration-300 ${errors.email ? 'border-red-500' : 'border-bronze-light/50 focus:shadow-[0_0_10px_rgba(22,130,125,0.06)]'}`}
                       />
                       {errors.email && <p className="text-[10px] font-semibold text-red-500 flex items-center gap-1 mt-1"><AlertCircle className="h-3.5 w-3.5 shrink-0" /> {errors.email}</p>}
                     </div>
-
+ 
                   </div>
-
+ 
                   <div className="grid grid-cols-1 gap-5 sm:grid-cols-12">
                     
                     {/* Phone number complex select+input setup */}
                     <div className="space-y-1.5 sm:col-span-6">
-                      <label className="text-[10px] font-black tracking-widest text-[#006A66] uppercase block">
+                      <label className="text-[10px] font-black tracking-widest text-turquoise-brand uppercase block">
                         PHONE NUMBER
                       </label>
-                      <div className="flex rounded-xl overflow-hidden border border-gray-200/80 bg-white/40 backdrop-blur-xs focus-within:border-turquoise-brand focus-within:bg-white focus-within:shadow-[0_0_12px_rgba(30,158,152,0.12)] transition-all duration-300">
-                        <span className="flex items-center px-3 text-xs font-bold text-gray-500 border-r border-gray-200/50 bg-gray-50">
+                      <div className="flex rounded-xl overflow-hidden border border-bronze-light/50 bg-bg-azure/20 focus-within:border-turquoise-brand focus-within:shadow-[0_0_10px_rgba(22,130,125,0.06)] transition-all duration-300">
+                        <span className="flex items-center px-3 text-xs font-bold text-navy-dark/60 border-r border-bronze-light/20 bg-bg-azure/50">
                           +91
                         </span>
                         <input
@@ -415,15 +415,15 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                           value={formData.phone}
                           onChange={handleInputChange}
                           placeholder="98765 43210"
-                          className="w-full bg-transparent px-3 py-2.5 text-sm text-navy-dark placeholder-gray-400 focus:outline-none inline-block"
+                          className="w-full bg-transparent px-3 py-2.5 text-sm text-navy-dark placeholder-navy-dark/40 focus:outline-none inline-block font-sans"
                         />
                       </div>
                       {errors.phone && <p className="text-[10px] font-semibold text-red-500 flex items-center gap-1 mt-1"><AlertCircle className="h-3.5 w-3.5 shrink-0" /> {errors.phone}</p>}
                     </div>
-
+ 
                     {/* Age */}
                     <div className="space-y-1.5 sm:col-span-3">
-                      <label className="text-[10px] font-black tracking-widest text-[#006A66] uppercase block">
+                      <label className="text-[10px] font-black tracking-widest text-turquoise-brand uppercase block">
                         AGE
                       </label>
                       <input
@@ -432,21 +432,21 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                         value={formData.age}
                         onChange={handleInputChange}
                         placeholder="28"
-                        className={`w-full rounded-xl border bg-white/40 backdrop-blur-xs px-4 py-2.5 text-sm text-navy-dark placeholder-gray-400 focus:border-turquoise-brand focus:bg-white focus:outline-none transition-all duration-300 ${errors.age ? 'border-red-500' : 'border-gray-200/80 focus:shadow-[0_0_12px_rgba(30,158,152,0.12)]'}`}
+                        className={`w-full rounded-xl border bg-bg-azure/20 px-4 py-2.5 text-sm text-navy-dark placeholder-navy-dark/40 focus:border-turquoise-brand focus:bg-transparent focus:outline-none transition-all duration-300 ${errors.age ? 'border-red-500' : 'border-bronze-light/50 focus:shadow-[0_0_10px_rgba(22,130,125,0.06)]'}`}
                       />
                       {errors.age && <p className="text-[10px] font-semibold text-red-500 flex items-center gap-1 mt-1"><AlertCircle className="h-3.5 w-3.5 shrink-0" /> {errors.age}</p>}
                     </div>
-
+ 
                     {/* Sex */}
                     <div className="space-y-1.5 sm:col-span-3">
-                      <label className="text-[10px] font-black tracking-widest text-[#006A66] uppercase block">
+                      <label className="text-[10px] font-black tracking-widest text-turquoise-brand uppercase block">
                         SEX
                       </label>
                       <select
                         name="sex"
                         value={formData.sex}
                         onChange={handleInputChange}
-                        className={`w-full rounded-xl border bg-white/40 backdrop-blur-xs px-4 py-3 text-xs text-navy-dark font-bold focus:border-turquoise-brand focus:bg-white focus:outline-none transition-all duration-300 cursor-pointer ${errors.sex ? 'border-red-500' : 'border-gray-200/80 focus:shadow-[0_0_12px_rgba(30,158,152,0.12)]'}`}
+                        className={`w-full rounded-xl border bg-bg-azure/20 px-4 py-3 text-xs text-navy-dark font-bold focus:border-turquoise-brand focus:bg-transparent focus:outline-none transition-all duration-300 cursor-pointer ${errors.sex ? 'border-red-500' : 'border-bronze-light/50 focus:shadow-[0_0_10px_rgba(22,130,125,0.06)]'}`}
                       >
                         <option value="">Select</option>
                         <option value="Male">Male</option>
@@ -455,12 +455,12 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                       </select>
                       {errors.sex && <p className="text-[10px] font-semibold text-red-500 flex items-center gap-1 mt-1"><AlertCircle className="h-3.5 w-3.5 shrink-0" /> {errors.sex}</p>}
                     </div>
-
+ 
                   </div>
-
+ 
                   {/* Date & Time Selection */}
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-black tracking-widest text-[#006A66] uppercase block">
+                    <label className="text-[10px] font-black tracking-widest text-turquoise-brand uppercase block">
                       PREFERRED DATE & TIME
                     </label>
                     <input
@@ -468,11 +468,11 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                       name="preferredDateTime"
                       value={formData.preferredDateTime}
                       onChange={handleInputChange}
-                      className={`w-full rounded-xl border bg-white/40 backdrop-blur-xs px-4 py-2.5 text-sm text-gray-700 font-bold focus:border-turquoise-brand focus:bg-white focus:outline-none transition-all duration-300 cursor-pointer ${errors.preferredDateTime ? 'border-red-500' : 'border-gray-200/80 focus:shadow-[0_0_12px_rgba(30,158,152,0.12)]'}`}
+                      className={`w-full rounded-xl border bg-bg-azure/20 px-4 py-2.5 text-sm text-navy-dark/70 font-bold focus:border-turquoise-brand focus:bg-transparent focus:outline-none transition-all duration-300 cursor-pointer ${errors.preferredDateTime ? 'border-red-500' : 'border-bronze-light/50 focus:shadow-[0_0_10px_rgba(22,130,125,0.06)]'}`}
                     />
                     {errors.preferredDateTime && <p className="text-[10px] font-semibold text-red-500 flex items-center gap-1 mt-1"><AlertCircle className="h-3.5 w-3.5 shrink-0" /> {errors.preferredDateTime}</p>}
                   </div>
-
+ 
                   {/* Request CTAs Button */}
                   <div className="pt-2">
                     <motion.button
@@ -480,7 +480,7 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                       disabled={isSubmitting}
                       whileHover={{ scale: isSubmitting ? 1 : 1.01 }}
                       whileTap={{ scale: isSubmitting ? 1 : 0.99 }}
-                      className="w-full rounded-full bg-orange-vitality py-4 text-xs font-black tracking-widest uppercase text-white shadow-lg shadow-orange-vitality/15 transition-all hover:bg-orange-600 disabled:bg-gray-400 disabled:shadow-none cursor-pointer"
+                      className="w-full rounded-full bg-orange-vitality py-4 text-xs font-black tracking-widest uppercase text-white shadow-lg shadow-turquoise-brand/15 transition-all hover:bg-turquoise-light disabled:bg-gray-400 disabled:shadow-none cursor-pointer"
                     >
                       {isSubmitting ? 'SECURED REGISTRATION ACTIVE...' : 'REQUEST MY CONSULTATION'}
                     </motion.button>
@@ -504,12 +504,12 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
               transition={{ duration: 0.5 }}
               className="mt-16 mx-auto max-w-5xl text-left"
             >
-              <div className="mb-8 border-b border-gray-200/50 pb-4">
+              <div className="mb-8 border-b border-bronze-light/30 pb-4">
                 <h3 className="font-serif text-2xl font-medium text-navy-dark flex items-center gap-3">
                   <Calendar className="h-6 w-6 text-turquoise-brand" />
                   My Scheduled <span className="italic font-light text-turquoise-brand">Consultations</span>
                 </h3>
-                <p className="text-[10px] text-gray-500 font-extrabold tracking-widest uppercase mt-1">
+                <p className="text-[10px] text-navy-dark/60 font-extrabold tracking-widest uppercase mt-1">
                   Your locally stored assessment bookings (stored in this browser session)
                 </p>
               </div>
@@ -527,16 +527,16 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -10, scale: 0.95 }}
                       transition={{ type: "spring", stiffness: 450, damping: 28 }}
-                      className="bg-white/80 backdrop-blur-md border border-white/60 rounded-3xl p-6 shadow-[0_8px_30px_rgba(7,21,36,0.02)] flex flex-col justify-between text-left space-y-5 hover:shadow-[0_15px_40px_rgba(7,21,36,0.05)] hover:border-turquoise-brand/25 transition-all duration-300"
+                      className="bg-transparent border border-bronze-light/45 rounded-3xl p-6 shadow-none flex flex-col justify-between text-left space-y-5 hover:shadow-[0_10px_30px_rgba(32,52,41,0.03)] hover:border-turquoise-brand/35 transition-all duration-300"
                     >
                       <div className="flex items-start justify-between">
                         <div className="space-y-1.5">
-                          <div className="inline-flex items-center gap-1.5 rounded-full bg-[#E0F7F6] px-2.5 py-1 text-[9px] font-extrabold text-[#006A66] uppercase border border-[#006A66]/10">
+                          <div className="inline-flex items-center gap-1.5 rounded-full bg-turquoise-brand/10 px-2.5 py-1 text-[9px] font-extrabold text-turquoise-brand uppercase border border-turquoise-brand/20">
                             <ShieldCheck className="h-3 w-3 text-turquoise-brand" />
                             {app.careCenter}
                           </div>
                           <h4 className="text-lg font-bold text-navy-dark font-sans">{app.fullName}</h4>
-                          <p className="text-[10px] text-gray-500 font-extrabold uppercase tracking-wider">
+                          <p className="text-[10px] text-navy-dark/60 font-extrabold uppercase tracking-wider font-sans">
                             Age: {app.age} | Sex: {app.sex}
                           </p>
                         </div>
@@ -545,20 +545,20 @@ export default function BookingForm({ initialCenterName = '' }: BookingFormProps
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           onClick={() => handleCancelBooking(app.id)}
-                          className="text-gray-400 hover:text-red-500 rounded-xl p-2 hover:bg-red-50 border border-transparent hover:border-red-100 transition-all cursor-pointer"
+                          className="text-[#9D3B24]/60 hover:text-[#9D3B24] rounded-xl p-2 hover:bg-[#9D3B24]/5 border border-transparent hover:border-[#9D3B24]/20 transition-all cursor-pointer"
                           title="Cancel Consultation"
                         >
                           <Trash2 className="h-4.5 w-4.5" />
                         </motion.button>
                       </div>
                       
-                      <div className="flex items-center justify-between pt-4 border-t border-gray-100/60 text-xs font-bold text-gray-600">
+                      <div className="flex items-center justify-between pt-4 border-t border-bronze-light/20 text-xs font-bold text-navy-dark/75">
                         <div className="flex items-center gap-2">
                           <Calendar className="h-4 w-4 text-orange-vitality" />
                           <span>{new Date(app.preferredDateTime).toLocaleDateString()}</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <Clock className="h-4 w-4 text-[#006A66]" />
+                          <Clock className="h-4 w-4 text-turquoise-brand" />
                           <span>{new Date(app.preferredDateTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
                         </div>
                       </div>

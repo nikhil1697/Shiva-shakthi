@@ -29,9 +29,9 @@ export default function Header({
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${isScrolled ? 'bg-white/75 backdrop-blur-xl shadow-lg shadow-navy-dark/3 border-b border-gray-200/20 py-1' : 'bg-white border-b border-transparent py-2'}`}>
+    <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${isScrolled ? 'bg-bg-azure/80 backdrop-blur-xl shadow-md shadow-navy-dark/3 border-b border-bronze-light/30 py-1' : 'bg-bg-azure border-b border-transparent py-2'}`}>
       {/* Super Top bar */}
-      <div className={`border-b border-gray-100 bg-gray-50/80 px-4 text-[10px] text-gray-500 sm:px-6 lg:px-8 transition-all duration-500 overflow-hidden ${isScrolled ? 'max-h-0 py-0 opacity-0 border-b-0' : 'max-h-12 py-2.5 opacity-100'}`}>
+      <div className={`border-b border-bronze-light/20 bg-bg-azure/50 px-4 text-[10px] text-navy-dark/60 sm:px-6 lg:px-8 transition-all duration-500 overflow-hidden ${isScrolled ? 'max-h-0 py-0 opacity-0 border-b-0' : 'max-h-12 py-2.5 opacity-100'}`}>
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <div className="flex gap-5 font-bold tracking-wider uppercase">
             <a href="#support" className="transition hover:text-turquoise-brand">Support</a>
@@ -48,7 +48,7 @@ export default function Header({
             </button>
             <a
               href="tel:+919900012345"
-              className="flex items-center gap-1.5 rounded-full bg-red-600 px-3.5 py-1 text-[9px] font-black tracking-widest text-white hover:bg-red-700 transition-colors"
+              className="flex items-center gap-1.5 rounded-full bg-[#9D3B24] px-3.5 py-1 text-[9px] font-black tracking-widest text-white hover:bg-[#85301E] transition-colors"
             >
               <ShieldAlert className="h-3 w-3 animate-pulse" />
               EMERGENCY
@@ -67,7 +67,7 @@ export default function Header({
                 <span className="text-2xl font-serif font-bold tracking-tight text-navy-dark">
                   Shiva Shakthi
                 </span>
-                <span className="hidden text-3xs font-black tracking-widest text-turquoise-brand uppercase sm:block border-l border-gray-300 pl-2">
+                <span className="hidden text-3xs font-black tracking-widest text-turquoise-brand uppercase sm:block border-l border-bronze-light/50 pl-2">
                   Integrated Health
                 </span>
               </div>
@@ -109,7 +109,7 @@ export default function Header({
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
               onClick={onBookClick}
-              className="rounded-full bg-orange-vitality px-6 py-2.5 text-2xs font-black tracking-widest text-white shadow-md shadow-orange-500/10 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-300 active:scale-95 cursor-pointer"
+              className="rounded-full bg-orange-vitality px-6 py-2.5 text-2xs font-black tracking-widest text-white shadow-md shadow-turquoise-brand/10 hover:bg-turquoise-light hover:shadow-lg hover:shadow-turquoise-brand/20 transition-all duration-300 active:scale-95 cursor-pointer"
             >
               BOOK APPOINTMENT
             </motion.button>
@@ -135,7 +135,7 @@ export default function Header({
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute inset-x-0 top-full z-40 border-b border-gray-100 bg-white/95 backdrop-blur-xl shadow-lg md:hidden overflow-hidden"
+            className="absolute inset-x-0 top-full z-40 border-b border-bronze-light/30 bg-bg-azure/95 backdrop-blur-xl shadow-lg md:hidden overflow-hidden"
           >
             <div className="space-y-1 px-4 py-4 sm:px-6">
               <button
@@ -174,13 +174,13 @@ export default function Header({
               >
                 RESEARCH
               </button>
-              <div className="pt-4 border-t border-gray-100">
+              <div className="pt-4 border-t border-bronze-light/20">
                 <button
                   onClick={() => {
                     onBookClick();
                     setIsOpen(false);
                   }}
-                  className="w-full rounded-full bg-orange-vitality py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-orange-600"
+                  className="w-full rounded-full bg-orange-vitality py-3 text-center text-sm font-bold text-white shadow-sm hover:bg-turquoise-light"
                 >
                   BOOK APPOINTMENT
                 </button>

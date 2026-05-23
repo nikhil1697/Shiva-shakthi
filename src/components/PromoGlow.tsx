@@ -52,11 +52,11 @@ export default function PromoGlow() {
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-navy-dark/75 transition-opacity duration-500 group-hover:bg-navy-dark/70"></div>
+              <div className="absolute inset-0 bg-navy-dark/85 transition-opacity duration-500 group-hover:bg-navy-dark/80"></div>
             </div>
             
             {/* Visual accent badge */}
-            <div className="absolute top-6 left-6 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-turquoise-brand/20 backdrop-blur-md text-turquoise-brand border border-turquoise-brand/10">
+            <div className="absolute top-6 left-6 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-turquoise-brand/15 backdrop-blur-md text-turquoise-brand border border-turquoise-brand/20">
               <Orbit className="h-5 w-5 animate-spin-slow" />
             </div>
 
@@ -74,21 +74,21 @@ export default function PromoGlow() {
           <motion.div 
             variants={cardVariants}
             whileHover={{ y: -6, transition: { duration: 0.2 } }}
-            className="relative overflow-hidden rounded-3xl bg-white/60 backdrop-blur-md p-6 shadow-xl border border-white/80 flex flex-col justify-between text-left cursor-pointer transition-shadow hover:shadow-2xl h-[280px]"
+            className="relative overflow-hidden rounded-3xl bg-transparent p-6 shadow-xl border border-bronze-light/50 flex flex-col justify-between text-left cursor-pointer transition-shadow hover:shadow-2xl h-[280px]"
           >
             {/* Background Image Layer with light overlay */}
             <div className="absolute inset-0 z-0">
               <img
                 src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=600"
                 alt="Board-Certified Specialists"
-                className="h-full w-full object-cover opacity-15 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-20"
+                className="h-full w-full object-cover opacity-10 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-15"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-white/60"></div>
+              <div className="absolute inset-0 bg-bg-azure/40"></div>
             </div>
 
             {/* Badge Icon */}
-            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-[#E0F7F6]/90 text-[#006A66] shadow-inner">
+            <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-turquoise-brand/10 text-turquoise-brand shadow-inner">
               <Users className="h-5 w-5" />
             </div>
 
@@ -129,7 +129,7 @@ export default function PromoGlow() {
           <motion.div 
             variants={cardVariants}
             whileHover={{ y: -6, transition: { duration: 0.2 } }}
-            className="relative overflow-hidden rounded-3xl h-[280px] bg-gradient-to-tr from-[#072428] via-[#004D4A] to-[#2FB7B1] p-6 text-left flex flex-col justify-between group shadow-xl cursor-pointer border border-white/5"
+            className="relative overflow-hidden rounded-3xl h-[280px] bg-gradient-to-tr from-navy-dark via-navy-light to-turquoise-brand p-6 text-left flex flex-col justify-between group shadow-xl cursor-pointer border border-bronze-light/20"
           >
             {/* Background Image Layer with teal overlay */}
             <div className="absolute inset-0 z-0">
@@ -139,7 +139,7 @@ export default function PromoGlow() {
                 className="h-full w-full object-cover opacity-20 mix-blend-overlay transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#072428]/90 via-[#004D4A]/85 to-[#2FB7B1]/80 z-0"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-navy-dark/95 via-navy-light/90 to-turquoise-brand/85 z-0"></div>
             </div>
 
             {/* Gradient background animated glow circles */}
@@ -154,7 +154,7 @@ export default function PromoGlow() {
               <h4 className="text-xl font-serif font-bold text-white tracking-tight">
                 Functional Focus
               </h4>
-              <p className="text-xs leading-relaxed text-cyan-100/90 font-sans">
+              <p className="text-xs leading-relaxed text-white/80 font-sans">
                 Moving beyond symptom suppression to thoroughly address and resolve the root physiological causes of chronic dysfunction.
               </p>
             </div>

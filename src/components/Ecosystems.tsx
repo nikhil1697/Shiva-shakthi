@@ -57,43 +57,43 @@ export default function Ecosystems({ onBookCenter }: EcosystemsProps) {
     switch (theme) {
       case 'red':
         return {
-          text: 'text-red-600',
-          bg: 'bg-red-50/80',
-          border: 'border-red-200/50 hover:border-red-500/30',
-          shadow: 'hover:shadow-red-500/5',
-          bulletIcon: 'text-red-500',
-          gradient: 'from-red-500/5 to-transparent',
-          badge: 'bg-red-500/10 text-red-700'
+          text: 'text-[#9D3B24]',
+          bg: 'bg-[#9D3B24]/10',
+          border: 'border-bronze-light/40 hover:border-[#9D3B24]/60',
+          shadow: 'hover:shadow-[#9D3B24]/5',
+          bulletIcon: 'text-[#9D3B24]',
+          gradient: 'from-[#9D3B24]/5 to-transparent',
+          badge: 'bg-[#9D3B24]/10 text-[#9D3B24]'
         };
       case 'blue':
         return {
           text: 'text-turquoise-brand',
           bg: 'bg-turquoise-brand/10',
-          border: 'border-turquoise-brand/20 hover:border-turquoise-brand/40',
+          border: 'border-bronze-light/40 hover:border-turquoise-brand/50',
           shadow: 'hover:shadow-turquoise-brand/5',
           bulletIcon: 'text-turquoise-brand',
           gradient: 'from-turquoise-brand/5 to-transparent',
-          badge: 'bg-turquoise-brand/10 text-[#006a66]'
+          badge: 'bg-turquoise-brand/10 text-turquoise-brand'
         };
       case 'yellow':
         return {
-          text: 'text-amber-600',
-          bg: 'bg-amber-50/80',
-          border: 'border-amber-200/50 hover:border-amber-500/30',
-          shadow: 'hover:shadow-amber-500/5',
-          bulletIcon: 'text-amber-500',
-          gradient: 'from-amber-500/5 to-transparent',
-          badge: 'bg-amber-500/10 text-amber-800'
+          text: 'text-[#8C6A3C]',
+          bg: 'bg-[#D8CEB8]/20',
+          border: 'border-bronze-light/40 hover:border-bronze-dark/60',
+          shadow: 'hover:shadow-bronze-dark/5',
+          bulletIcon: 'text-[#8C6A3C]',
+          gradient: 'from-[#8C6A3C]/5 to-transparent',
+          badge: 'bg-[#D8CEB8]/20 text-[#8C6A3C]'
         };
       case 'violet':
         return {
-          text: 'text-violet-600',
-          bg: 'bg-violet-50/80',
-          border: 'border-violet-200/50 hover:border-violet-500/30',
-          shadow: 'hover:shadow-violet-500/5',
-          bulletIcon: 'text-violet-500',
-          gradient: 'from-violet-500/5 to-transparent',
-          badge: 'bg-violet-500/10 text-violet-800'
+          text: 'text-navy-light',
+          bg: 'bg-navy-light/10',
+          border: 'border-bronze-light/40 hover:border-navy-light/50',
+          shadow: 'hover:shadow-navy-light/5',
+          bulletIcon: 'text-navy-light',
+          gradient: 'from-navy-light/5 to-transparent',
+          badge: 'bg-navy-light/10 text-navy-light'
         };
     }
   };
@@ -169,7 +169,7 @@ export default function Ecosystems({ onBookCenter }: EcosystemsProps) {
                   transition: { duration: 0.3 }
                 }}
                 onClick={() => setSelectedCenter(center)}
-                className={`group flex flex-col justify-between rounded-2xl bg-white/70 backdrop-blur-md p-6 border ${classes.border} transition-all duration-500 cursor-pointer relative overflow-hidden`}
+                className={`group flex flex-col justify-between rounded-2xl bg-transparent p-6 border ${classes.border} transition-all duration-500 cursor-pointer relative overflow-hidden`}
               >
                 {/* Glow underlay gradients */}
                 <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl ${classes.gradient} opacity-50 rounded-bl-full pointer-events-none`} />
@@ -196,10 +196,10 @@ export default function Ecosystems({ onBookCenter }: EcosystemsProps) {
                   </div>
 
                   {/* Bullets List */}
-                  <ul className="my-6 space-y-2.5 border-t border-gray-100/60 pt-5">
+                  <ul className="my-6 space-y-2.5 border-t border-bronze-light/20 pt-5">
                     {center.bullets.map((bullet, idx) => (
                       <li key={idx} className="flex items-center gap-2.5 text-xs font-semibold text-gray-600">
-                        <span className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-gray-50`}>
+                        <span className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-bronze-light/10`}>
                           <span className={`h-1.5 w-1.5 rounded-full ${classes.bulletIcon}`} />
                         </span>
                         <span>{bullet}</span>
@@ -209,7 +209,7 @@ export default function Ecosystems({ onBookCenter }: EcosystemsProps) {
                 </div>
 
                 {/* Card CTA Link */}
-                <div className="mt-4 pt-4 border-t border-gray-100/60 relative z-10">
+                <div className="mt-4 pt-4 border-t border-bronze-light/20 relative z-10">
                   <span className={`inline-flex items-center gap-1 text-xs font-bold tracking-wider uppercase transition-all duration-300 group-hover:gap-2 ${classes.text}`}>
                     Explore <ArrowRight className="h-3.5 w-3.5" />
                   </span>
@@ -227,19 +227,19 @@ export default function Ecosystems({ onBookCenter }: EcosystemsProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-navy-dark/65 p-4 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-navy-dark/50 p-4 backdrop-blur-sm"
           >
             <motion.div
               initial={{ scale: 0.95, y: 20, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.95, y: 20, opacity: 0 }}
               transition={{ type: "spring", stiffness: 350, damping: 25 }}
-              className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-white/95 backdrop-blur-xl p-6 shadow-2xl border border-white/20 sm:p-8 text-left"
+              className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-bg-azure p-6 shadow-2xl border border-bronze-light/40 sm:p-8 text-left"
             >
               {/* Top Close bar */}
               <button
                 onClick={() => setSelectedCenter(null)}
-                className="absolute right-5 top-5 rounded-full bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                className="absolute right-5 top-5 rounded-full border border-bronze-light/20 bg-bg-azure/50 p-2 text-navy-dark/50 hover:bg-bronze-light/15 hover:text-navy-dark transition-colors"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -258,11 +258,11 @@ export default function Ecosystems({ onBookCenter }: EcosystemsProps) {
                   </div>
                 </div>
 
-                <blockquote className="border-l-2 border-bronze-light/40 pl-4 text-xs sm:text-sm italic text-gray-500 leading-relaxed font-serif">
+                <blockquote className="border-l-2 border-bronze-light/40 pl-4 text-xs sm:text-sm italic text-navy-dark/70 leading-relaxed font-serif">
                   {selectedCenter.tagline}
                 </blockquote>
 
-                <p className="text-xs sm:text-sm leading-relaxed text-gray-600 font-sans">
+                <p className="text-xs sm:text-sm leading-relaxed text-navy-dark/80 font-sans">
                   {selectedCenter.description}
                 </p>
 
@@ -270,7 +270,7 @@ export default function Ecosystems({ onBookCenter }: EcosystemsProps) {
                   <h4 className="text-xs font-bold uppercase tracking-wider text-navy-dark/80">Clinical Pillars Included:</h4>
                   <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                     {selectedCenter.bullets.map((bullet, idx) => (
-                      <div key={idx} className="flex items-center gap-2.5 rounded-xl bg-gray-50/80 border border-gray-100 p-3 text-xs font-bold text-gray-700">
+                      <div key={idx} className="flex items-center gap-2.5 rounded-xl bg-bg-azure/50 border border-bronze-light/30 p-3 text-xs font-bold text-navy-dark/80">
                         <ShieldCheck className={`h-4 w-4 ${getThemeClasses(selectedCenter.colorTheme).bulletIcon}`} />
                         <span>{bullet}</span>
                       </div>
@@ -279,19 +279,19 @@ export default function Ecosystems({ onBookCenter }: EcosystemsProps) {
                 </div>
 
                 {/* Popup CTA */}
-                <div className="pt-4 border-t border-gray-100 flex flex-col sm:flex-row gap-3">
+                <div className="pt-4 border-t border-bronze-light/20 flex flex-col sm:flex-row gap-3">
                   <button
                     onClick={() => {
                       onBookCenter(selectedCenter.name);
                       setSelectedCenter(null);
                     }}
-                    className="flex-grow rounded-full bg-orange-vitality py-3.5 text-center text-xs font-bold tracking-widest uppercase text-white hover:bg-orange-600 shadow-md shadow-orange-500/10 transition-colors cursor-pointer"
+                    className="flex-grow rounded-full bg-orange-vitality py-3.5 text-center text-xs font-bold tracking-widest uppercase text-white hover:bg-turquoise-light shadow-md shadow-turquoise-brand/10 transition-colors cursor-pointer"
                   >
                     REQUEST CONSULTATION
                   </button>
                   <button
                     onClick={() => setSelectedCenter(null)}
-                    className="rounded-full border border-gray-200 py-3.5 px-6 text-center text-xs font-bold tracking-widest uppercase text-gray-500 hover:bg-gray-50 transition-colors cursor-pointer"
+                    className="rounded-full border border-bronze-light/40 py-3.5 px-6 text-center text-xs font-bold tracking-widest uppercase text-navy-dark/60 hover:bg-bronze-light/15 transition-colors cursor-pointer"
                   >
                     CLOSE DETAILS
                   </button>

@@ -21,7 +21,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="aurora-glow h-96 w-96 bg-emerald-200/40 top-10 left-10"
+        className="aurora-glow h-96 w-96 bg-bronze-light/10 top-10 left-10"
       />
       <motion.div 
         animate={{
@@ -35,7 +35,7 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
           ease: "easeInOut",
           delay: 1
         }}
-        className="aurora-glow h-96 w-96 bg-teal-200/30 bottom-10 right-10"
+        className="aurora-glow h-96 w-96 bg-[#16827D]/5 bottom-10 right-10"
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full z-10 my-auto">
@@ -55,57 +55,35 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
               >
                 <defs>
                   <linearGradient id="spineGlow" x1="0" y1="1" x2="0" y2="0">
-                    <stop offset="0%" stopColor="#EF4444" stopOpacity="1.0" />
-                    <stop offset="16%" stopColor="#FB923C" stopOpacity="1.0" />
-                    <stop offset="33%" stopColor="#FBBF24" stopOpacity="1.0" />
-                    <stop offset="50%" stopColor="#34D399" stopOpacity="1.0" />
-                    <stop offset="66%" stopColor="#22D3EE" stopOpacity="1.0" />
-                    <stop offset="83%" stopColor="#60A5FA" stopOpacity="1.0" />
-                    <stop offset="100%" stopColor="#C084FC" stopOpacity="1.0" />
+                    <stop offset="0%" stopColor="#16827D" stopOpacity="1.0" />
+                    <stop offset="50%" stopColor="#D8CEB8" stopOpacity="1.0" />
+                    <stop offset="100%" stopColor="#16827D" stopOpacity="1.0" />
                   </linearGradient>
                   <linearGradient id="lotusGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#10B981" stopOpacity="0.8" />
-                    <stop offset="50%" stopColor="#059669" stopOpacity="0.5" />
-                    <stop offset="100%" stopColor="#064E3B" stopOpacity="0.2" />
-                  </linearGradient>
-                  <linearGradient id="elixirGrad" x1="1" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#F59E0B" stopOpacity="1" />
-                    <stop offset="50%" stopColor="#10B981" stopOpacity="0.8" />
-                    <stop offset="100%" stopColor="#FFFFFF" stopOpacity="1" />
+                    <stop offset="0%" stopColor="#16827D" stopOpacity="0.7" />
+                    <stop offset="50%" stopColor="#203429" stopOpacity="0.4" />
+                    <stop offset="100%" stopColor="#203429" stopOpacity="0.1" />
                   </linearGradient>
                   <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#FBBF24" />
-                    <stop offset="50%" stopColor="#F59E0B" />
-                    <stop offset="100%" stopColor="#D97706" />
-                  </linearGradient>
-                  <linearGradient id="sariGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#16827D" stopOpacity="0.45" />
-                    <stop offset="100%" stopColor="#0B413E" stopOpacity="0.2" />
+                    <stop offset="0%" stopColor="#203429" />
+                    <stop offset="50%" stopColor="#2E483B" />
+                    <stop offset="100%" stopColor="#203429" />
                   </linearGradient>
                   <radialGradient id="whiteShield" cx="0.5" cy="0.5" r="0.5">
-                    <stop offset="0%" stopColor="#EFF4F0" stopOpacity="0.95" />
-                    <stop offset="65%" stopColor="#EFF4F0" stopOpacity="0.8" />
-                    <stop offset="100%" stopColor="#EFF4F0" stopOpacity="0" />
-                  </radialGradient>
-                  <radialGradient id="haloGrad" cx="0.5" cy="0.5" r="0.5">
-                    <stop offset="0%" stopColor="#FBBF24" stopOpacity="0.5" />
-                    <stop offset="60%" stopColor="#F59E0B" stopOpacity="0.2" />
-                    <stop offset="100%" stopColor="#FBBF24" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#F4EFEA" stopOpacity="0.98" />
+                    <stop offset="65%" stopColor="#F4EFEA" stopOpacity="0.85" />
+                    <stop offset="100%" stopColor="#F4EFEA" stopOpacity="0" />
                   </radialGradient>
                   <linearGradient id="idaGlow" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#06B6D4" stopOpacity="0.95" />
-                    <stop offset="100%" stopColor="#1D4ED8" stopOpacity="0.4" />
+                    <stop offset="0%" stopColor="#16827D" stopOpacity="0.9" />
+                    <stop offset="100%" stopColor="#2E483B" stopOpacity="0.3" />
                   </linearGradient>
                   <linearGradient id="pingalaGlow" x1="1" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#F97316" stopOpacity="0.95" />
-                    <stop offset="100%" stopColor="#DC2626" stopOpacity="0.4" />
+                    <stop offset="0%" stopColor="#D8CEB8" stopOpacity="0.9" />
+                    <stop offset="100%" stopColor="#203429" stopOpacity="0.3" />
                   </linearGradient>
                   <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
                     <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                  </filter>
-                  <filter id="elixirGlow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur stdDeviation="4" result="blur" />
                     <feComposite in="SourceGraphic" in2="blur" operator="over" />
                   </filter>
                 </defs>
@@ -167,42 +145,42 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                   {/* Dynamic pulsing glowing leaves of the Tree of Life */}
                   {[
                     // Left major canopy
-                    { x: 150, y: 260, r: 8, color: "#10B981", delay: 0.1 },
-                    { x: 180, y: 260, r: 12, color: "#34D399", delay: 0.5 },
-                    { x: 200, y: 230, r: 10, color: "#FBBF24", delay: 0.9 },
-                    { x: 150, y: 210, r: 9, color: "#10B981", delay: 0.3 },
-                    { x: 230, y: 210, r: 11, color: "#6EE7B7", delay: 0.7 },
-                    { x: 260, y: 180, r: 7, color: "#FBBF24", delay: 1.1 },
-                    { x: 290, y: 170, r: 13, color: "#10B981", delay: 0.2 },
-                    { x: 250, y: 260, r: 8, color: "#34D399", delay: 0.6 },
+                    { x: 150, y: 260, r: 8, color: "#16827D", delay: 0.1 },
+                    { x: 180, y: 260, r: 12, color: "#2E483B", delay: 0.5 },
+                    { x: 200, y: 230, r: 10, color: "#D8CEB8", delay: 0.9 },
+                    { x: 150, y: 210, r: 9, color: "#16827D", delay: 0.3 },
+                    { x: 230, y: 210, r: 11, color: "#D8CEB8", delay: 0.7 },
+                    { x: 260, y: 180, r: 7, color: "#D8CEB8", delay: 1.1 },
+                    { x: 290, y: 170, r: 13, color: "#16827D", delay: 0.2 },
+                    { x: 250, y: 260, r: 8, color: "#2E483B", delay: 0.6 },
                     { x: 220, y: 280, r: 10, color: "#16827D", delay: 0.8 },
 
                     // Right major canopy
-                    { x: 650, y: 210, r: 9, color: "#10B981", delay: 0.4 },
-                    { x: 620, y: 260, r: 12, color: "#34D399", delay: 0.8 },
-                    { x: 600, y: 230, r: 10, color: "#FBBF24", delay: 0.1 },
-                    { x: 570, y: 210, r: 11, color: "#6EE7B7", delay: 0.6 },
-                    { x: 540, y: 180, r: 7, color: "#FBBF24", delay: 1.2 },
-                    { x: 510, y: 170, r: 13, color: "#10B981", delay: 0.3 },
-                    { x: 550, y: 260, r: 8, color: "#34D399", delay: 0.7 },
+                    { x: 650, y: 210, r: 9, color: "#16827D", delay: 0.4 },
+                    { x: 620, y: 260, r: 12, color: "#2E483B", delay: 0.8 },
+                    { x: 600, y: 230, r: 10, color: "#D8CEB8", delay: 0.1 },
+                    { x: 570, y: 210, r: 11, color: "#D8CEB8", delay: 0.6 },
+                    { x: 540, y: 180, r: 7, color: "#D8CEB8", delay: 1.2 },
+                    { x: 510, y: 170, r: 13, color: "#16827D", delay: 0.3 },
+                    { x: 550, y: 260, r: 8, color: "#2E483B", delay: 0.7 },
                     { x: 580, y: 280, r: 10, color: "#16827D", delay: 0.9 },
-                    { x: 650, y: 260, r: 8, color: "#10B981", delay: 0.2 },
+                    { x: 650, y: 260, r: 8, color: "#16827D", delay: 0.2 },
 
                     // Center top canopy
-                    { x: 400, y: 120, r: 11, color: "#34D399", delay: 0.5 },
-                    { x: 370, y: 150, r: 10, color: "#10B981", delay: 0.9 },
-                    { x: 430, y: 150, r: 10, color: "#10B981", delay: 0.2 },
-                    { x: 360, y: 120, r: 8, color: "#FBBF24", delay: 0.7 },
-                    { x: 440, y: 120, r: 8, color: "#FBBF24", delay: 1.1 },
-                    { x: 380, y: 90, r: 9, color: "#6EE7B7", delay: 0.3 },
-                    { x: 420, y: 90, r: 9, color: "#6EE7B7", delay: 0.8 },
-                    { x: 400, y: 70, r: 7, color: "#34D399", delay: 1.3 },
+                    { x: 400, y: 120, r: 11, color: "#2E483B", delay: 0.5 },
+                    { x: 370, y: 150, r: 10, color: "#16827D", delay: 0.9 },
+                    { x: 430, y: 150, r: 10, color: "#16827D", delay: 0.2 },
+                    { x: 360, y: 120, r: 8, color: "#D8CEB8", delay: 0.7 },
+                    { x: 440, y: 120, r: 8, color: "#D8CEB8", delay: 1.1 },
+                    { x: 380, y: 90, r: 9, color: "#D8CEB8", delay: 0.3 },
+                    { x: 420, y: 90, r: 9, color: "#D8CEB8", delay: 0.8 },
+                    { x: 400, y: 70, r: 7, color: "#2E483B", delay: 1.3 },
                     
                     // Mid canopy transitions
-                    { x: 310, y: 240, r: 12, color: "#10B981", delay: 0.4 },
-                    { x: 490, y: 240, r: 12, color: "#10B981", delay: 0.8 },
-                    { x: 330, y: 140, r: 9, color: "#34D399", delay: 0.6 },
-                    { x: 470, y: 140, r: 9, color: "#34D399", delay: 1.0 },
+                    { x: 310, y: 240, r: 12, color: "#16827D", delay: 0.4 },
+                    { x: 490, y: 240, r: 12, color: "#16827D", delay: 0.8 },
+                    { x: 330, y: 140, r: 9, color: "#2E483B", delay: 0.6 },
+                    { x: 470, y: 140, r: 9, color: "#2E483B", delay: 1.0 },
                   ].map((leaf, idx) => (
                     <g key={`tree-leaf-${idx}`}>
                       {/* Pulsing Leaf Glow */}
@@ -343,13 +321,13 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
 
                 {/* Chakras */}
                 {[
-                  { name: "Crown", y: 380, color: "#C084FC" },
-                  { name: "Third Eye", y: 430, color: "#60A5FA" },
-                  { name: "Throat", y: 485, color: "#22D3EE" },
-                  { name: "Heart", y: 540, color: "#34D399" },
-                  { name: "Solar Plexus", y: 595, color: "#FBBF24" },
-                  { name: "Sacral", y: 650, color: "#FB923C" },
-                  { name: "Root", y: 705, color: "#EF4444" }
+                  { name: "Crown", y: 380, color: "#D8CEB8" },      // Gold-sand
+                  { name: "Third Eye", y: 430, color: "#16827D" },  // Teal-green
+                  { name: "Throat", y: 485, color: "#28A5A0" },     // Light teal
+                  { name: "Heart", y: 540, color: "#16827D" },      // Teal-green
+                  { name: "Solar Plexus", y: 595, color: "#D8CEB8" }, // Gold-sand
+                  { name: "Sacral", y: 650, color: "#28A5A0" },     // Light teal
+                  { name: "Root", y: 705, color: "#16827D" }        // Teal-green
                 ].map((chakra, idx) => (
                   <g key={`chakra-${chakra.name}`}>
                     {/* Outer pulsing energy field */}
@@ -422,12 +400,12 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center gap-1.5 rounded-full bg-[#E0F7F6]/85 backdrop-blur-md px-4 py-1.5 text-[10px] sm:text-xs font-bold tracking-wider text-[#006A66] uppercase border border-turquoise-brand/10 shadow-sm"
+              className="inline-flex items-center gap-1.5 rounded-full bg-turquoise-brand/10 px-4 py-1.5 text-[10px] sm:text-xs font-bold tracking-wider text-turquoise-brand uppercase border border-turquoise-brand/20 shadow-sm"
             >
-              <Sparkles className="h-3 w-3 animate-pulse text-[#006a66]" />
+              <Sparkles className="h-3 w-3 animate-pulse text-turquoise-brand" />
               PRECISION LONGEVITY
             </motion.div>
-
+ 
             {/* Display Heading */}
             <motion.h1 
               initial={{ opacity: 0, y: 25 }}
@@ -443,18 +421,18 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
               Your Inner <br />
               Healing Power?
             </motion.h1>
-
+ 
             {/* Subheading */}
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg font-sans"
+              className="max-w-xl text-base leading-relaxed text-navy-dark/70 sm:text-lg font-sans"
             >
               Experience a revolutionary fusion of advanced medical science and holistic wisdom 
               designed to optimize your health span, enhance cognitive clarity, and restore cellular vitality.
             </motion.p>
-
+ 
             {/* CTAs */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -466,14 +444,14 @@ export default function HeroSection({ onStartJourneyClick, onExploreScienceClick
                 whileHover={{ scale: 1.03, y: -1 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={onStartJourneyClick}
-                className="group flex items-center justify-center gap-2 rounded-full bg-orange-vitality px-8 py-4 text-xs sm:text-sm font-bold tracking-wider text-white shadow-xl shadow-orange-500/25 hover:bg-orange-600 hover:shadow-orange-600/35 transition-all duration-300 cursor-pointer"
+                className="group flex items-center justify-center gap-2 rounded-full bg-orange-vitality px-8 py-4 text-xs sm:text-sm font-bold tracking-wider text-white shadow-xl shadow-turquoise-brand/20 hover:bg-turquoise-light hover:shadow-turquoise-light/35 transition-all duration-300 cursor-pointer"
               >
                 START YOUR JOURNEY
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </motion.button>
               
               <motion.button
-                whileHover={{ scale: 1.03, backgroundColor: "rgba(30, 158, 152, 0.08)" }}
+                whileHover={{ scale: 1.03, backgroundColor: "rgba(22, 130, 125, 0.08)" }}
                 whileTap={{ scale: 0.98 }}
                 onClick={onExploreScienceClick}
                 className="flex items-center justify-center gap-2 rounded-full border border-turquoise-brand/40 px-8 py-4 text-xs sm:text-sm font-bold tracking-wider text-turquoise-brand transition-all duration-300 cursor-pointer bg-transparent"

@@ -31,7 +31,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-navy-dark text-white pt-16 pb-8 border-t border-white/5">
+    <footer className="bg-turquoise-brand text-white pt-16 pb-8 border-t border-bronze-light/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Main 5-Column Grid */}
@@ -40,40 +40,40 @@ export default function Footer() {
           {/* Brand Presentation (Col Span 4) */}
           <div className="lg:col-span-4 space-y-6 text-left">
             <div className="space-y-3">
-              <span className="text-2xl font-black tracking-tight text-white block">
+              <span className="text-2xl font-bold tracking-tight text-white font-serif block">
                 Shiva Shakthi Health
               </span>
-              <p className="text-xs leading-relaxed text-gray-300 max-w-sm">
+              <p className="text-xs leading-relaxed text-white/90 max-w-sm">
                 Pioneering the precise future of proactive medical longevity, diagnostic excellence, and holistic healing systems for a vibrant human lifespan experience.
               </p>
             </div>
 
             {/* Quality Standard Badges Icons */}
-            <div className="flex items-center gap-4 text-turquoise-brand">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 border border-white/5 title='Global standards'">
+            <div className="flex items-center gap-4 text-bronze-light">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 border border-white/10 hover:bg-white/20 transition-all duration-300" title="Global standards">
                 <Globe className="h-4 w-4" />
               </div>
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 border border-white/5 title='Cellular wellness'">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 border border-white/10 hover:bg-white/20 transition-all duration-300" title="Cellular wellness">
                 <Heart className="h-4 w-4" />
               </div>
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 border border-white/5 title='Legitimacy standards'">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 border border-white/10 hover:bg-white/20 transition-all duration-300" title="Legitimacy standards">
                 <Shield className="h-4 w-4" />
               </div>
             </div>
           </div>
 
           {/* Nav Lists (Col Span 8 Divided In 4 Columns) */}
-          <div className="lg:col-span-8 grid grid-cols-2 gap-8 sm:grid-cols-4 text-left">
+          <div className="lg:col-span-8 grid grid-cols-2 gap-8 sm:grid-cols-4 text-left font-serif">
             
             {/* Science */}
             <div className="space-y-4">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-[#2FB7B1]">
+              <h4 className="text-xs font-bold uppercase tracking-widest text-bronze-light">
                 SCIENCE
               </h4>
-              <ul className="space-y-2 text-xs">
+              <ul className="space-y-2 text-xs font-sans">
                 {scienceLinks.map((link, idx) => (
                   <li key={idx}>
-                    <a href={link.href} className="text-gray-300 hover:text-white transition">
+                    <a href={link.href} className="text-white/85 hover:text-bronze-light transition duration-300">
                       {link.label}
                     </a>
                   </li>
@@ -83,13 +83,13 @@ export default function Footer() {
 
             {/* Services */}
             <div className="space-y-4">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-[#2FB7B1]">
+              <h4 className="text-xs font-bold uppercase tracking-widest text-bronze-light">
                 SERVICES
               </h4>
-              <ul className="space-y-2 text-xs">
+              <ul className="space-y-2 text-xs font-sans">
                 {servicesLinks.map((link, idx) => (
                   <li key={idx}>
-                    <a href={link.href} className="text-gray-300 hover:text-white transition">
+                    <a href={link.href} className="text-white/85 hover:text-bronze-light transition duration-300">
                       {link.label}
                     </a>
                   </li>
@@ -99,13 +99,13 @@ export default function Footer() {
 
             {/* Specialties */}
             <div className="space-y-4">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-[#2FB7B1]">
+              <h4 className="text-xs font-bold uppercase tracking-widest text-bronze-light">
                 SPECIALTIES
               </h4>
-              <ul className="space-y-2 text-xs">
+              <ul className="space-y-2 text-xs font-sans">
                 {specialtiesLinks.map((link, idx) => (
                   <li key={idx}>
-                    <a href={link.href} className="text-gray-300 hover:text-white transition">
+                    <a href={link.href} className="text-white/85 hover:text-bronze-light transition duration-300">
                       {link.label}
                     </a>
                   </li>
@@ -115,13 +115,13 @@ export default function Footer() {
 
             {/* Legal */}
             <div className="space-y-4">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-[#2FB7B1]">
+              <h4 className="text-xs font-bold uppercase tracking-widest text-bronze-light">
                 LEGAL
               </h4>
-              <ul className="space-y-2 text-xs">
+              <ul className="space-y-2 text-xs font-sans">
                 {legalLinks.map((link, idx) => (
                   <li key={idx}>
-                    <a href={link.href} className="text-gray-300 hover:text-white transition">
+                    <a href={link.href} className="text-white/85 hover:text-bronze-light transition duration-300">
                       {link.label}
                     </a>
                   </li>
@@ -134,7 +134,7 @@ export default function Footer() {
         </div>
 
         {/* Outer bottom strip */}
-        <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row gap-4 items-center justify-between text-2xs text-gray-500 font-semibold tracking-wider uppercase">
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row gap-4 items-center justify-between text-2xs text-bronze-light/80 font-semibold tracking-widest uppercase">
           <span>
             © 2026 SHIVA SHAKTHI HEALTH, LONGEVITY & PRECISION SCIENCE. ALL RIGHTS RESERVED.
           </span>

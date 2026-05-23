@@ -35,16 +35,16 @@ export default function Clinicians() {
   ];
 
   return (
-    <section id="research" className="relative bg-bg-azure py-20 lg:py-28 border-t border-gray-100 overflow-hidden">
+    <section id="research" className="relative bg-bg-azure py-20 lg:py-28 border-t border-bronze-light/20 overflow-hidden">
       {/* Dynamic ambient background blobs */}
       <div className="absolute top-1/3 right-10 h-[350px] w-[350px] rounded-full bg-orange-vitality/5 blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-10 left-10 h-[300px] w-[300px] rounded-full bg-turquoise-brand/5 blur-3xl pointer-events-none"></div>
-
+ 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Title Block */}
         <div className="mb-20 text-center space-y-4">
-          <span className="text-xs font-black tracking-widest text-[#006A66] uppercase block">
+          <span className="text-xs font-black tracking-widest text-turquoise-brand uppercase block">
             MEDICAL LEADERSHIP
           </span>
           <h2 className="font-serif text-4xl lg:text-5xl font-medium tracking-tight text-navy-dark leading-tight">
@@ -73,13 +73,13 @@ export default function Clinicians() {
                   <motion.div 
                     animate={{ rotate: 360 }}
                     transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-                    className="absolute h-56 w-56 rounded-full border border-dashed border-[#1E9E98]/20"
+                    className="absolute h-56 w-56 rounded-full border border-dashed border-turquoise-brand/20"
                   />
                   {/* Orbit 2: Faster counter-rotating track */}
                   <motion.div 
                     animate={{ rotate: -360 }}
                     transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                    className="absolute h-[210px] w-[210px] rounded-full border border-dashed border-orange-vitality/10"
+                    className="absolute h-[210px] w-[210px] rounded-full border border-dashed border-bronze-light/30"
                   />
                   {/* Orbiting dot */}
                   <motion.div 
@@ -104,7 +104,7 @@ export default function Clinicians() {
                 <motion.div 
                   whileHover={{ scale: 1.03 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  className="relative h-48 w-48 rounded-full p-2 bg-white shadow-xl shadow-navy-dark/5 flex items-center justify-center overflow-hidden border border-gray-100"
+                  className="relative h-48 w-48 rounded-full p-2 bg-transparent shadow-none flex items-center justify-center overflow-hidden border border-bronze-light/40"
                 >
                   <img
                     src={doc.imageUrl}
@@ -127,7 +127,7 @@ export default function Clinicians() {
                 </h3>
                 
                 {/* Clinical Role uppercase */}
-                <p className="text-[10px] font-black tracking-widest text-[#006A66] uppercase leading-tight">
+                <p className="text-[10px] font-black tracking-widest text-turquoise-brand uppercase leading-tight">
                   {doc.role}
                 </p>
 

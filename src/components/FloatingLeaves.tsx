@@ -11,7 +11,7 @@ const LEAF_SHAPES = [
 
 const LEAF_GRADIENTS = [
   "url(#leafGradTeal)",
-  "url(#leafGradEmerald)",
+  "url(#leafGradForest)",
   "url(#leafGradGold)"
 ];
 
@@ -47,15 +47,15 @@ export default function FloatingLeaves() {
         <defs>
           <linearGradient id="leafGradTeal" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stopColor="#16827D" />
-            <stop offset="100%" stopColor="#34D399" />
+            <stop offset="100%" stopColor="#28A5A0" />
           </linearGradient>
-          <linearGradient id="leafGradEmerald" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#059669" />
-            <stop offset="100%" stopColor="#6EE7B7" />
+          <linearGradient id="leafGradForest" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#203429" />
+            <stop offset="100%" stopColor="#2E483B" />
           </linearGradient>
           <linearGradient id="leafGradGold" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#A27B3C" />
-            <stop offset="100%" stopColor="#FBBF24" />
+            <stop offset="0%" stopColor="#D8CEB8" />
+            <stop offset="100%" stopColor="#EADDB9" />
           </linearGradient>
         </defs>
       </svg>

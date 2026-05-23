@@ -88,16 +88,16 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
   };
 
   return (
-    <section id="programs" className="relative bg-bg-azure py-20 lg:py-28 border-t border-gray-100 overflow-hidden">
+    <section id="programs" className="relative bg-bg-azure py-20 lg:py-28 border-t border-bronze-light/20 overflow-hidden">
       {/* Subtle background decoration */}
-      <div className="absolute top-1/2 left-1/4 h-[300px] w-[300px] -translate-y-1/2 rounded-full bg-[#1E9E98]/5 blur-3xl pointer-events-none"></div>
-
+      <div className="absolute top-1/2 left-1/4 h-[300px] w-[300px] -translate-y-1/2 rounded-full bg-turquoise-brand/5 blur-3xl pointer-events-none"></div>
+ 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header with Navigation Arrows */}
         <div className="mb-14 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div className="space-y-3 text-left">
-            <span className="text-xs font-black tracking-widest text-[#006A66] uppercase">
+            <span className="text-xs font-black tracking-widest text-turquoise-brand uppercase">
               CORE OFFERINGS
             </span>
             <h2 className="font-serif text-4xl lg:text-5xl font-medium tracking-tight text-navy-dark leading-tight">
@@ -108,7 +108,7 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
           {/* Navigation Arrows & Progress track */}
           <div className="flex items-center gap-3 self-end sm:self-auto">
             {/* Scroll Progress track (desktop) */}
-            <div className="hidden sm:block w-32 h-0.5 bg-gray-200/80 rounded-full overflow-hidden mr-4">
+            <div className="hidden sm:block w-32 h-0.5 bg-bronze-light/20 rounded-full overflow-hidden mr-4">
               <div 
                 className="h-full bg-turquoise-brand transition-all duration-100 ease-out" 
                 style={{ width: `${scrollProgress}%` }}
@@ -119,7 +119,7 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handlePrev}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 bg-white text-navy-dark shadow-sm hover:border-[#006A66] hover:text-[#006A66] transition-colors cursor-pointer"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-bronze-light/40 bg-transparent text-navy-dark shadow-none hover:border-turquoise-brand hover:text-turquoise-brand transition-colors cursor-pointer"
               aria-label="Previous programs"
             >
               <ChevronLeft className="h-5 w-5" />
@@ -129,7 +129,7 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleNext}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 bg-white text-navy-dark shadow-sm hover:border-[#006A66] hover:text-[#006A66] transition-colors cursor-pointer"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-bronze-light/40 bg-transparent text-navy-dark shadow-none hover:border-turquoise-brand hover:text-turquoise-brand transition-colors cursor-pointer"
               aria-label="Next programs"
             >
               <ChevronRight className="h-5 w-5" />
@@ -149,7 +149,7 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
               onClick={() => setSelectedProgram(program)}
               whileHover={{ y: -8, scale: 1.01 }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="group min-w-[300px] max-w-[380px] flex-1 shrink-0 snap-start bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden border border-white/60 shadow-[0_8px_30px_rgba(7,21,36,0.02)] hover:shadow-[0_20px_40px_rgba(7,21,36,0.06)] hover:border-turquoise-brand/30 transition-all duration-300 cursor-pointer text-left flex flex-col"
+              className="group min-w-[300px] max-w-[380px] flex-1 shrink-0 snap-start bg-transparent rounded-3xl overflow-hidden border border-bronze-light/40 shadow-none hover:shadow-[0_10px_30px_rgba(32,52,41,0.04)] hover:border-turquoise-brand/35 transition-all duration-300 cursor-pointer text-left flex flex-col"
             >
               {/* Cover Image with label badges */}
               <div className="relative h-56 overflow-hidden">
@@ -165,27 +165,27 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
                 <span className="absolute bottom-4 left-4 bg-navy-dark/85 backdrop-blur-md text-white font-bold text-[10px] tracking-widest px-3 py-1 rounded-full uppercase border border-white/10">
                   {program.duration}
                 </span>
-
+ 
                 {/* Aesthetic Status badge */}
                 <span className="absolute top-4 right-4 bg-orange-vitality text-white font-black text-[9px] tracking-wider px-2.5 py-0.5 rounded-full">
                   {program.tag}
                 </span>
               </div>
-
+ 
               {/* Card Body */}
               <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
                 <div>
                   <h3 className="text-xl font-bold text-navy-dark group-hover:text-turquoise-brand transition-colors font-sans">
                     {program.title}
                   </h3>
-                  <p className="text-xs leading-relaxed text-gray-500 mt-2">
+                  <p className="text-xs leading-relaxed text-navy-dark/70 mt-2 font-sans">
                     {program.description}
                   </p>
                 </div>
                 
                 {/* Learn more interactive trigger link */}
-                <div className="pt-4 flex items-center justify-between border-t border-gray-100/50 mt-auto">
-                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#006A66] uppercase tracking-wider group-hover:text-turquoise-brand transition-colors">
+                <div className="pt-4 flex items-center justify-between border-t border-bronze-light/20 mt-auto">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-turquoise-brand uppercase tracking-wider group-hover:text-turquoise-brand transition-colors">
                     Explore Program <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1.5 transition-transform duration-300" />
                   </span>
                 </div>
@@ -195,7 +195,7 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
         </div>
 
         {/* Scroll Progress track (mobile) */}
-        <div className="block sm:hidden w-32 h-0.5 bg-gray-200/80 rounded-full overflow-hidden mx-auto mt-6">
+        <div className="block sm:hidden w-32 h-0.5 bg-bronze-light/20 rounded-full overflow-hidden mx-auto mt-6">
           <div 
             className="h-full bg-turquoise-brand transition-all duration-100 ease-out" 
             style={{ width: `${scrollProgress}%` }}
@@ -211,24 +211,24 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-navy-dark/60 p-4 backdrop-blur-md"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-navy-dark/50 p-4 backdrop-blur-sm"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 350 }}
-              className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-white p-6 shadow-2xl sm:p-8 max-h-[90vh] overflow-y-auto border border-gray-100"
+              className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-bg-azure p-6 shadow-2xl sm:p-8 max-h-[90vh] overflow-y-auto border border-bronze-light/40"
             >
               {/* Top Close bar */}
               <button
                 onClick={() => setSelectedProgram(null)}
-                className="absolute right-4 top-4 rounded-full bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-900 transition-colors z-10 cursor-pointer"
+                className="absolute right-4 top-4 rounded-full border border-bronze-light/20 bg-bg-azure/50 p-2 text-navy-dark/50 hover:bg-bronze-light/15 hover:text-navy-dark transition-colors z-10 cursor-pointer"
                 aria-label="Close details"
               >
                 <X className="h-5 w-5" />
               </button>
-
+ 
               {/* Inner Content */}
               <div className="space-y-6">
                 <div className="relative h-48 rounded-2xl overflow-hidden shadow-inner">
@@ -246,15 +246,15 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
                     <h3 className="font-serif text-2xl font-medium tracking-tight text-white">{selectedProgram.title}</h3>
                   </div>
                 </div>
-
-                <p className="text-xs leading-relaxed text-gray-600 font-medium">
+ 
+                <p className="text-xs leading-relaxed text-navy-dark/80 font-medium">
                   {getDetailedBio(selectedProgram.title).overview}
                 </p>
-
+ 
                 {/* Protocol phases */}
-                <div className="space-y-3 bg-bg-azure/50 p-4 rounded-2xl border border-gray-100/50">
-                  <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-[#006A66] flex items-center gap-2">
-                    <Clock className="h-4 w-4 text-[#006A66]" /> PROTOCOL STRUCTURE:
+                <div className="space-y-3 bg-bg-azure p-4 rounded-2xl border border-bronze-light/25">
+                  <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-turquoise-brand flex items-center gap-2">
+                    <Clock className="h-4 w-4 text-turquoise-brand" /> PROTOCOL STRUCTURE:
                   </h4>
                   <div className="space-y-2.5">
                     {getDetailedBio(selectedProgram.title).phases.map((ph, idx) => (
@@ -263,9 +263,9 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
                         initial={{ opacity: 0, x: -8 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.1 + idx * 0.05 }}
-                        className="flex gap-3 text-xs text-gray-700 font-semibold items-center"
+                        className="flex gap-3 text-xs text-navy-dark/85 font-semibold items-center"
                       >
-                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#006A66]/10 text-xs font-black text-[#006A66]">
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-turquoise-brand/10 text-xs font-black text-turquoise-brand">
                           {idx + 1}
                         </span>
                         <span>{ph}</span>
@@ -273,7 +273,7 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
                     ))}
                   </div>
                 </div>
-
+ 
                 {/* Core Offer Perks list */}
                 <div className="space-y-3">
                   <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-navy-dark flex items-center gap-2">
@@ -286,7 +286,7 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
                         initial={{ opacity: 0, x: -8 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 + idx * 0.05 }}
-                        className="flex items-center gap-3 rounded-xl bg-bg-azure/40 px-4 py-3 text-xs font-bold text-gray-700 border border-gray-100/50"
+                        className="flex items-center gap-3 rounded-xl bg-bg-azure px-4 py-3 text-xs font-bold text-navy-dark/85 border border-bronze-light/20"
                       >
                         <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-turquoise-brand/10 text-turquoise-brand">
                           <Check className="h-3 w-3" />
@@ -296,9 +296,9 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
                     ))}
                   </div>
                 </div>
-
+ 
                 {/* Close CTAs */}
-                <div className="pt-4 border-t border-gray-100 flex flex-col sm:flex-row gap-3">
+                <div className="pt-4 border-t border-bronze-light/20 flex flex-col sm:flex-row gap-3">
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -306,7 +306,7 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
                       onBookProgram(selectedProgram.title);
                       setSelectedProgram(null);
                     }}
-                    className="flex-1 rounded-full bg-orange-vitality py-3.5 text-center text-xs font-black tracking-widest text-white hover:bg-orange-600 shadow-md shadow-orange-vitality/10 cursor-pointer"
+                    className="flex-1 rounded-full bg-orange-vitality py-3.5 text-center text-xs font-black tracking-widest text-white hover:bg-turquoise-light shadow-md shadow-turquoise-brand/10 cursor-pointer"
                   >
                     STRENGTHEN CELL ENROLLMENT
                   </motion.button>
@@ -314,7 +314,7 @@ export default function OfferingsSection({ onBookProgram }: OfferingsSectionProp
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => setSelectedProgram(null)}
-                    className="flex-1 rounded-full border border-gray-200 py-3.5 text-center text-xs font-bold tracking-wider text-gray-600 hover:bg-gray-50 cursor-pointer"
+                    className="flex-1 rounded-full border border-bronze-light/40 py-3.5 text-center text-xs font-bold tracking-wider text-navy-dark/70 hover:bg-bronze-light/15 cursor-pointer"
                   >
                     CLOSE BLUEPRINT
                   </motion.button>
